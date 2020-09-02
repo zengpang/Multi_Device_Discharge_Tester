@@ -16,7 +16,7 @@ namespace 多设备放电检测测试仪
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Multi_Device_Form());
         }
     }
 }
