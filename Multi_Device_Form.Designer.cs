@@ -296,6 +296,7 @@
             this.SerialPort5_Button.TabIndex = 0;
             this.SerialPort5_Button.Text = "打开串口";
             this.SerialPort5_Button.UseVisualStyleBackColor = true;
+            this.SerialPort5_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel7
             // 
@@ -374,6 +375,7 @@
             this.SerialPort3_Button.TabIndex = 0;
             this.SerialPort3_Button.Text = "打开串口";
             this.SerialPort3_Button.UseVisualStyleBackColor = true;
+            this.SerialPort3_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel5
             // 
@@ -413,6 +415,7 @@
             this.SerialPort2_Button.TabIndex = 0;
             this.SerialPort2_Button.Text = "打开串口";
             this.SerialPort2_Button.UseVisualStyleBackColor = true;
+            this.SerialPort2_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel4
             // 
@@ -700,6 +703,21 @@
             // Timer_Intevel_ComboBox
             // 
             this.Timer_Intevel_ComboBox.FormattingEnabled = true;
+            this.Timer_Intevel_ComboBox.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900",
+            "1000",
+            "1100",
+            "1200",
+            "1300",
+            "1400"});
             this.Timer_Intevel_ComboBox.Location = new System.Drawing.Point(223, 157);
             this.Timer_Intevel_ComboBox.Name = "Timer_Intevel_ComboBox";
             this.Timer_Intevel_ComboBox.Size = new System.Drawing.Size(252, 20);
@@ -708,6 +726,18 @@
             // SerialPort_BaudRate_ComboBox
             // 
             this.SerialPort_BaudRate_ComboBox.FormattingEnabled = true;
+            this.SerialPort_BaudRate_ComboBox.Items.AddRange(new object[] {
+            "      600",
+            "     1200",
+            "     2400",
+            "     4800",
+            "     9600",
+            "    14400",
+            "    19200",
+            "    28800",
+            "    38400",
+            "    57600",
+            "   115200"});
             this.SerialPort_BaudRate_ComboBox.Location = new System.Drawing.Point(223, 110);
             this.SerialPort_BaudRate_ComboBox.Name = "SerialPort_BaudRate_ComboBox";
             this.SerialPort_BaudRate_ComboBox.Size = new System.Drawing.Size(252, 20);
@@ -739,6 +769,26 @@
             this.Equipment_ComboBox.TabIndex = 0;
             this.Equipment_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Equipment_ComboBox_SelectedIndexChanged);
             // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
+            // 
+            // serialPort2
+            // 
+            this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
+            // 
+            // serialPort3
+            // 
+            this.serialPort3.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
+            // 
+            // serialPort4
+            // 
+            this.serialPort4.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
+            // 
+            // serialPort5
+            // 
+            this.serialPort5.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
+            // 
             // timer1
             // 
             this.timer1.Interval = 300;
@@ -749,46 +799,55 @@
             // 
             this.timer2.Interval = 300;
             this.timer2.Tag = "2";
+            this.timer2.Tick += new System.EventHandler(this.timer_paint_Tick);
             // 
             // timer3
             // 
             this.timer3.Interval = 300;
             this.timer3.Tag = "3";
+            this.timer3.Tick += new System.EventHandler(this.timer_paint_Tick);
             // 
             // timer4
             // 
             this.timer4.Interval = 300;
             this.timer4.Tag = "4";
+            this.timer4.Tick += new System.EventHandler(this.timer_paint_Tick);
             // 
             // timer5
             // 
             this.timer5.Interval = 300;
             this.timer5.Tag = "5";
+            this.timer5.Tick += new System.EventHandler(this.timer_paint_Tick);
             // 
             // Timer_Send_1
             // 
             this.Timer_Send_1.Interval = 300;
             this.Timer_Send_1.Tag = "Send_1";
+            this.Timer_Send_1.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
             // Timer_Send_2
             // 
             this.Timer_Send_2.Interval = 300;
             this.Timer_Send_2.Tag = "Send_2";
+            this.Timer_Send_2.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
             // Timer_Send_3
             // 
             this.Timer_Send_3.Interval = 300;
             this.Timer_Send_3.Tag = "Send_3";
+            this.Timer_Send_3.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
             // Timer_Send_4
             // 
             this.Timer_Send_4.Interval = 300;
             this.Timer_Send_4.Tag = "Send_4";
+            this.Timer_Send_4.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
             // Timer_Send_5
             // 
             this.Timer_Send_5.Interval = 300;
             this.Timer_Send_5.Tag = "Send_5";
+            this.Timer_Send_5.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
             // Multi_Device_Form
             // 

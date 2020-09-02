@@ -24,6 +24,7 @@ namespace 多设备放电检测测试仪
         private string Xml_Path = "Protocol.xml";
          
         private string[]Protocol_Group=new string[5];
+        private string[] Protocol_TitleName_Group = new string[5];
         private Protocols protocols;
         private CartogramPaint cartogramPaint;
         private SendMessageTo16Bytes sendMessageTo16Bytes;
@@ -262,6 +263,7 @@ namespace 多设备放电检测测试仪
 
                         SetSave(serialPort1, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_1, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[0]= Protocol_Content_TextBox.Text.Trim();
+                        Protocol_TitleName_Group[0] = Protocol_TitleName_ComboBox.Text.Trim();
 
                     }
                    ;
@@ -270,6 +272,7 @@ namespace 多设备放电检测测试仪
                     {
                         SetSave(serialPort2, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_2, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[1] = Protocol_Content_TextBox.Text.Trim();
+                        Protocol_TitleName_Group[1] = Protocol_TitleName_ComboBox.Text.Trim();
                     }
                    ;
                     break;
@@ -278,6 +281,7 @@ namespace 多设备放电检测测试仪
                     {
                         SetSave(serialPort3, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_3, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[2] = Protocol_Content_TextBox.Text.Trim();
+                        Protocol_TitleName_Group[2] = Protocol_TitleName_ComboBox.Text.Trim();
                     }
                    ;
                     break;
@@ -285,6 +289,7 @@ namespace 多设备放电检测测试仪
                     {
                         SetSave(serialPort4, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_4, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[3] = Protocol_Content_TextBox.Text.Trim();
+                        Protocol_TitleName_Group[3] = Protocol_TitleName_ComboBox.Text.Trim();
                     }
                    ;
                     break;
@@ -292,6 +297,7 @@ namespace 多设备放电检测测试仪
                     {
                         SetSave(serialPort5, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_5, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[4] = Protocol_Content_TextBox.Text.Trim();
+                        Protocol_TitleName_Group[4] = Protocol_TitleName_ComboBox.Text.Trim();
                     }
                    ;
                     break;
@@ -303,7 +309,69 @@ namespace 多设备放电检测测试仪
 
         private void Equipment_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Protocol_Content_TextBox.Clear();
+            string BaudRateText = "";
+            string TimerIntevelText = "";
+            string ProtocolText = "";
 
+
+            switch (Equipment_ComboBox.Text.Trim())
+            {
+                case "设备1":
+                    {
+                        BaudRateText = Convert.ToString( serialPort1.BaudRate);
+                        TimerIntevelText = Convert.ToString(Timer_Send_1.Interval);
+                        ProtocolText = Protocol_TitleName_Group[0];
+
+
+
+                    }
+                  ;
+                    break;
+                case "设备2":
+                    {
+                        BaudRateText = Convert.ToString(serialPort2.BaudRate);
+                        TimerIntevelText = Convert.ToString(Timer_Send_2.Interval);
+                        ProtocolText = Protocol_TitleName_Group[1];
+                    }
+                  ;
+                    break;
+
+                case "设备3":
+                    {
+                        BaudRateText = Convert.ToString(serialPort3.BaudRate);
+                        TimerIntevelText = Convert.ToString(Timer_Send_3.Interval);
+                        ProtocolText = Protocol_TitleName_Group[2];
+                    }
+                  ;
+                    break;
+                case "设备4":
+                    {
+                        BaudRateText = Convert.ToString(serialPort4.BaudRate);
+                        TimerIntevelText = Convert.ToString(Timer_Send_4.Interval);
+                        ProtocolText = Protocol_TitleName_Group[3];
+                    }
+                  ;
+                    break;
+                case "设备5":
+                    {
+                        BaudRateText = Convert.ToString(serialPort5.BaudRate);
+                        TimerIntevelText = Convert.ToString(Timer_Send_5.Interval);
+                        ProtocolText = Protocol_TitleName_Group[4];
+                    }
+                  ;
+                    break;
+
+
+
+            }
+            SerialPort_BaudRate_ComboBox.Text = "  " + BaudRateText.Trim();
+            Timer_Intevel_ComboBox.Text = " " + TimerIntevelText.Trim();
+            Protocol_TitleName_ComboBox.Text = " " + ProtocolText;
+            if(ProtocolText!=null)
+            {
+                Protocol_TitleName_ComboBox_SelectedIndexChanged(sender, e);
+            }
         }
     }
 }
