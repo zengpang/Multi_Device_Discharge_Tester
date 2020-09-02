@@ -16,5 +16,7 @@ namespace 多设备放电检测测试仪
         {
             InitializeComponent();
         }
+
+        
     }
 }
