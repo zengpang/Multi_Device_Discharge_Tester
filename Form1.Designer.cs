@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -47,6 +48,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.c1Chart3 = new C1.Win.C1Chart.C1Chart();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort4 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort5 = new System.IO.Ports.SerialPort(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,7 +83,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1176, 636);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "放电检测";
             // 
             // panel4
             // 
@@ -129,14 +135,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(68, 3);
+            this.comboBox1.Location = new System.Drawing.Point(68, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(101, 20);
             this.comboBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(68, 86);
+            this.button1.Location = new System.Drawing.Point(68, 72);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 36);
             this.button1.TabIndex = 0;
@@ -148,7 +154,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1276, 636);
+            this.tabPage2.Size = new System.Drawing.Size(1176, 636);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -300,6 +306,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private C1.Win.C1Chart.C1Chart c1Chart3;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.IO.Ports.SerialPort serialPort2;
+        private System.IO.Ports.SerialPort serialPort3;
+        private System.IO.Ports.SerialPort serialPort4;
+        private System.IO.Ports.SerialPort serialPort5;
     }
 }
 
