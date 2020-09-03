@@ -32,6 +32,42 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Multi_Device_Form));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.Total_Energy_Label_5 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_5 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_5 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_5 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.Total_Energy_Label_4 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_4 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_4 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_4 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.Total_Energy_Label_3 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_3 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_3 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_3 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.Total_Energy_Label_2 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_2 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_2 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_2 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.c1Chart5 = new C1.Win.C1Chart.C1Chart();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -59,10 +95,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.c1Chart1 = new C1.Win.C1Chart.C1Chart();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Total_Energy_Label_1 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_1 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_1 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -102,6 +138,10 @@
             this.Timer_Send_5 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.c1Chart5)).BeginInit();
             this.panel11.SuspendLayout();
@@ -136,6 +176,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
+            this.tabPage1.Controls.Add(this.panel16);
+            this.tabPage1.Controls.Add(this.panel15);
+            this.tabPage1.Controls.Add(this.panel14);
+            this.tabPage1.Controls.Add(this.panel13);
             this.tabPage1.Controls.Add(this.panel12);
             this.tabPage1.Controls.Add(this.panel11);
             this.tabPage1.Controls.Add(this.panel10);
@@ -153,6 +197,422 @@
             this.tabPage1.Size = new System.Drawing.Size(1176, 836);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "放电检测";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel16.Controls.Add(this.Total_Energy_Label_5);
+            this.panel16.Controls.Add(this.Partial_Average_Label_5);
+            this.panel16.Controls.Add(this.Partial_Max_Label_5);
+            this.panel16.Controls.Add(this.DisChargIng_Label_5);
+            this.panel16.Controls.Add(this.label48);
+            this.panel16.Controls.Add(this.label49);
+            this.panel16.Controls.Add(this.label50);
+            this.panel16.Controls.Add(this.label51);
+            this.panel16.Location = new System.Drawing.Point(218, 694);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(180, 134);
+            this.panel16.TabIndex = 16;
+            // 
+            // Total_Energy_Label_5
+            // 
+            this.Total_Energy_Label_5.AutoSize = true;
+            this.Total_Energy_Label_5.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_5.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_5.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_5.Name = "Total_Energy_Label_5";
+            this.Total_Energy_Label_5.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_5.TabIndex = 7;
+            this.Total_Energy_Label_5.Text = "0";
+            // 
+            // Partial_Average_Label_5
+            // 
+            this.Partial_Average_Label_5.AutoSize = true;
+            this.Partial_Average_Label_5.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_5.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_5.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_5.Name = "Partial_Average_Label_5";
+            this.Partial_Average_Label_5.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_5.TabIndex = 6;
+            this.Partial_Average_Label_5.Text = "0 PC";
+            // 
+            // Partial_Max_Label_5
+            // 
+            this.Partial_Max_Label_5.AutoSize = true;
+            this.Partial_Max_Label_5.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_5.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_5.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_5.Name = "Partial_Max_Label_5";
+            this.Partial_Max_Label_5.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_5.TabIndex = 5;
+            this.Partial_Max_Label_5.Text = "0 PC";
+            // 
+            // DisChargIng_Label_5
+            // 
+            this.DisChargIng_Label_5.AutoSize = true;
+            this.DisChargIng_Label_5.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_5.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_5.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_5.Name = "DisChargIng_Label_5";
+            this.DisChargIng_Label_5.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_5.TabIndex = 4;
+            this.DisChargIng_Label_5.Text = "0";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("宋体", 13F);
+            this.label48.ForeColor = System.Drawing.Color.Yellow;
+            this.label48.Location = new System.Drawing.Point(3, 104);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(98, 18);
+            this.label48.TabIndex = 3;
+            this.label48.Text = "采集总能量";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("宋体", 13F);
+            this.label49.ForeColor = System.Drawing.Color.Yellow;
+            this.label49.Location = new System.Drawing.Point(14, 72);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(80, 18);
+            this.label49.TabIndex = 2;
+            this.label49.Text = "局放均值";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("宋体", 13F);
+            this.label50.ForeColor = System.Drawing.Color.Yellow;
+            this.label50.Location = new System.Drawing.Point(14, 42);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(80, 18);
+            this.label50.TabIndex = 1;
+            this.label50.Text = "局放最值";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("宋体", 13F);
+            this.label51.ForeColor = System.Drawing.Color.Yellow;
+            this.label51.Location = new System.Drawing.Point(14, 11);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(80, 18);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "放电次数";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel15.Controls.Add(this.Total_Energy_Label_4);
+            this.panel15.Controls.Add(this.Partial_Average_Label_4);
+            this.panel15.Controls.Add(this.Partial_Max_Label_4);
+            this.panel15.Controls.Add(this.DisChargIng_Label_4);
+            this.panel15.Controls.Add(this.label40);
+            this.panel15.Controls.Add(this.label41);
+            this.panel15.Controls.Add(this.label42);
+            this.panel15.Controls.Add(this.label43);
+            this.panel15.Location = new System.Drawing.Point(218, 531);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(180, 134);
+            this.panel15.TabIndex = 15;
+            // 
+            // Total_Energy_Label_4
+            // 
+            this.Total_Energy_Label_4.AutoSize = true;
+            this.Total_Energy_Label_4.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_4.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_4.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_4.Name = "Total_Energy_Label_4";
+            this.Total_Energy_Label_4.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_4.TabIndex = 7;
+            this.Total_Energy_Label_4.Text = "0";
+            // 
+            // Partial_Average_Label_4
+            // 
+            this.Partial_Average_Label_4.AutoSize = true;
+            this.Partial_Average_Label_4.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_4.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_4.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_4.Name = "Partial_Average_Label_4";
+            this.Partial_Average_Label_4.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_4.TabIndex = 6;
+            this.Partial_Average_Label_4.Text = "0 PC";
+            // 
+            // Partial_Max_Label_4
+            // 
+            this.Partial_Max_Label_4.AutoSize = true;
+            this.Partial_Max_Label_4.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_4.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_4.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_4.Name = "Partial_Max_Label_4";
+            this.Partial_Max_Label_4.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_4.TabIndex = 5;
+            this.Partial_Max_Label_4.Text = "0 PC";
+            // 
+            // DisChargIng_Label_4
+            // 
+            this.DisChargIng_Label_4.AutoSize = true;
+            this.DisChargIng_Label_4.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_4.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_4.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_4.Name = "DisChargIng_Label_4";
+            this.DisChargIng_Label_4.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_4.TabIndex = 4;
+            this.DisChargIng_Label_4.Text = "0";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("宋体", 13F);
+            this.label40.ForeColor = System.Drawing.Color.Yellow;
+            this.label40.Location = new System.Drawing.Point(3, 104);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(98, 18);
+            this.label40.TabIndex = 3;
+            this.label40.Text = "采集总能量";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("宋体", 13F);
+            this.label41.ForeColor = System.Drawing.Color.Yellow;
+            this.label41.Location = new System.Drawing.Point(14, 72);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(80, 18);
+            this.label41.TabIndex = 2;
+            this.label41.Text = "局放均值";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("宋体", 13F);
+            this.label42.ForeColor = System.Drawing.Color.Yellow;
+            this.label42.Location = new System.Drawing.Point(14, 42);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(80, 18);
+            this.label42.TabIndex = 1;
+            this.label42.Text = "局放最值";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("宋体", 13F);
+            this.label43.ForeColor = System.Drawing.Color.Yellow;
+            this.label43.Location = new System.Drawing.Point(14, 11);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(80, 18);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "放电次数";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel14.Controls.Add(this.Total_Energy_Label_3);
+            this.panel14.Controls.Add(this.Partial_Average_Label_3);
+            this.panel14.Controls.Add(this.Partial_Max_Label_3);
+            this.panel14.Controls.Add(this.DisChargIng_Label_3);
+            this.panel14.Controls.Add(this.label32);
+            this.panel14.Controls.Add(this.label33);
+            this.panel14.Controls.Add(this.label34);
+            this.panel14.Controls.Add(this.label35);
+            this.panel14.Location = new System.Drawing.Point(218, 364);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(180, 134);
+            this.panel14.TabIndex = 14;
+            // 
+            // Total_Energy_Label_3
+            // 
+            this.Total_Energy_Label_3.AutoSize = true;
+            this.Total_Energy_Label_3.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_3.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_3.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_3.Name = "Total_Energy_Label_3";
+            this.Total_Energy_Label_3.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_3.TabIndex = 7;
+            this.Total_Energy_Label_3.Text = "0";
+            // 
+            // Partial_Average_Label_3
+            // 
+            this.Partial_Average_Label_3.AutoSize = true;
+            this.Partial_Average_Label_3.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_3.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_3.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_3.Name = "Partial_Average_Label_3";
+            this.Partial_Average_Label_3.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_3.TabIndex = 6;
+            this.Partial_Average_Label_3.Text = "0 PC";
+            // 
+            // Partial_Max_Label_3
+            // 
+            this.Partial_Max_Label_3.AutoSize = true;
+            this.Partial_Max_Label_3.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_3.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_3.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_3.Name = "Partial_Max_Label_3";
+            this.Partial_Max_Label_3.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_3.TabIndex = 5;
+            this.Partial_Max_Label_3.Text = "0 PC";
+            // 
+            // DisChargIng_Label_3
+            // 
+            this.DisChargIng_Label_3.AutoSize = true;
+            this.DisChargIng_Label_3.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_3.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_3.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_3.Name = "DisChargIng_Label_3";
+            this.DisChargIng_Label_3.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_3.TabIndex = 4;
+            this.DisChargIng_Label_3.Text = "0";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("宋体", 13F);
+            this.label32.ForeColor = System.Drawing.Color.Yellow;
+            this.label32.Location = new System.Drawing.Point(3, 104);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(98, 18);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "采集总能量";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("宋体", 13F);
+            this.label33.ForeColor = System.Drawing.Color.Yellow;
+            this.label33.Location = new System.Drawing.Point(14, 72);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(80, 18);
+            this.label33.TabIndex = 2;
+            this.label33.Text = "局放均值";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("宋体", 13F);
+            this.label34.ForeColor = System.Drawing.Color.Yellow;
+            this.label34.Location = new System.Drawing.Point(14, 42);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(80, 18);
+            this.label34.TabIndex = 1;
+            this.label34.Text = "局放最值";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("宋体", 13F);
+            this.label35.ForeColor = System.Drawing.Color.Yellow;
+            this.label35.Location = new System.Drawing.Point(14, 11);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(80, 18);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "放电次数";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel13.Controls.Add(this.Total_Energy_Label_2);
+            this.panel13.Controls.Add(this.Partial_Average_Label_2);
+            this.panel13.Controls.Add(this.Partial_Max_Label_2);
+            this.panel13.Controls.Add(this.DisChargIng_Label_2);
+            this.panel13.Controls.Add(this.label24);
+            this.panel13.Controls.Add(this.label25);
+            this.panel13.Controls.Add(this.label26);
+            this.panel13.Controls.Add(this.label27);
+            this.panel13.Location = new System.Drawing.Point(218, 197);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(180, 134);
+            this.panel13.TabIndex = 13;
+            // 
+            // Total_Energy_Label_2
+            // 
+            this.Total_Energy_Label_2.AutoSize = true;
+            this.Total_Energy_Label_2.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_2.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_2.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_2.Name = "Total_Energy_Label_2";
+            this.Total_Energy_Label_2.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_2.TabIndex = 7;
+            this.Total_Energy_Label_2.Text = "0";
+            // 
+            // Partial_Average_Label_2
+            // 
+            this.Partial_Average_Label_2.AutoSize = true;
+            this.Partial_Average_Label_2.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_2.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_2.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_2.Name = "Partial_Average_Label_2";
+            this.Partial_Average_Label_2.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_2.TabIndex = 6;
+            this.Partial_Average_Label_2.Text = "0 PC";
+            // 
+            // Partial_Max_Label_2
+            // 
+            this.Partial_Max_Label_2.AutoSize = true;
+            this.Partial_Max_Label_2.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_2.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_2.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_2.Name = "Partial_Max_Label_2";
+            this.Partial_Max_Label_2.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_2.TabIndex = 5;
+            this.Partial_Max_Label_2.Text = "0 PC";
+            // 
+            // DisChargIng_Label_2
+            // 
+            this.DisChargIng_Label_2.AutoSize = true;
+            this.DisChargIng_Label_2.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_2.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_2.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_2.Name = "DisChargIng_Label_2";
+            this.DisChargIng_Label_2.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_2.TabIndex = 4;
+            this.DisChargIng_Label_2.Text = "0";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("宋体", 13F);
+            this.label24.ForeColor = System.Drawing.Color.Yellow;
+            this.label24.Location = new System.Drawing.Point(3, 104);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(98, 18);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "采集总能量";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("宋体", 13F);
+            this.label25.ForeColor = System.Drawing.Color.Yellow;
+            this.label25.Location = new System.Drawing.Point(14, 72);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 18);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "局放均值";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("宋体", 13F);
+            this.label26.ForeColor = System.Drawing.Color.Yellow;
+            this.label26.Location = new System.Drawing.Point(14, 42);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 18);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "局放最值";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("宋体", 13F);
+            this.label27.ForeColor = System.Drawing.Color.Yellow;
+            this.label27.Location = new System.Drawing.Point(14, 11);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(80, 18);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "放电次数";
             // 
             // panel12
             // 
@@ -446,10 +906,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.Total_Energy_Label_1);
+            this.panel2.Controls.Add(this.Partial_Average_Label_1);
+            this.panel2.Controls.Add(this.Partial_Max_Label_1);
+            this.panel2.Controls.Add(this.DisChargIng_Label_1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -459,60 +919,60 @@
             this.panel2.Size = new System.Drawing.Size(180, 134);
             this.panel2.TabIndex = 3;
             // 
-            // label6
+            // Total_Energy_Label_1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 13F);
-            this.label6.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label6.Location = new System.Drawing.Point(100, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 18);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
+            this.Total_Energy_Label_1.AutoSize = true;
+            this.Total_Energy_Label_1.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_1.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_1.Name = "Total_Energy_Label_1";
+            this.Total_Energy_Label_1.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_1.TabIndex = 7;
+            this.Total_Energy_Label_1.Text = "0";
             // 
-            // label7
+            // Partial_Average_Label_1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 13F);
-            this.label7.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label7.Location = new System.Drawing.Point(100, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 18);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.Partial_Average_Label_1.AutoSize = true;
+            this.Partial_Average_Label_1.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_1.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_1.Name = "Partial_Average_Label_1";
+            this.Partial_Average_Label_1.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_1.TabIndex = 6;
+            this.Partial_Average_Label_1.Text = "0 PC";
             // 
-            // label8
+            // Partial_Max_Label_1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 13F);
-            this.label8.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label8.Location = new System.Drawing.Point(100, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 18);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "label8";
+            this.Partial_Max_Label_1.AutoSize = true;
+            this.Partial_Max_Label_1.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_1.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_1.Name = "Partial_Max_Label_1";
+            this.Partial_Max_Label_1.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_1.TabIndex = 5;
+            this.Partial_Max_Label_1.Text = "0 PC";
             // 
-            // label9
+            // DisChargIng_Label_1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 13F);
-            this.label9.ForeColor = System.Drawing.Color.Chartreuse;
-            this.label9.Location = new System.Drawing.Point(100, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 18);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "label9";
+            this.DisChargIng_Label_1.AutoSize = true;
+            this.DisChargIng_Label_1.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_1.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_1.Name = "DisChargIng_Label_1";
+            this.DisChargIng_Label_1.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_1.TabIndex = 4;
+            this.DisChargIng_Label_1.Text = "0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 13F);
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(14, 104);
+            this.label5.Location = new System.Drawing.Point(3, 104);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 18);
+            this.label5.Size = new System.Drawing.Size(98, 18);
             this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.label5.Text = "采集总能量";
             // 
             // label4
             // 
@@ -521,9 +981,9 @@
             this.label4.ForeColor = System.Drawing.Color.Yellow;
             this.label4.Location = new System.Drawing.Point(14, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label4.Text = "局放均值";
             // 
             // label3
             // 
@@ -532,9 +992,9 @@
             this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(14, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.label3.Text = "局放最值";
             // 
             // label2
             // 
@@ -543,9 +1003,9 @@
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(14, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.label2.Text = "放电次数";
             // 
             // panel1
             // 
@@ -771,22 +1231,27 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // serialPort2
             // 
+            this.serialPort2.BaudRate = 115200;
             this.serialPort2.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // serialPort3
             // 
+            this.serialPort3.BaudRate = 115200;
             this.serialPort3.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // serialPort4
             // 
+            this.serialPort4.BaudRate = 115200;
             this.serialPort4.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // serialPort5
             // 
+            this.serialPort5.BaudRate = 115200;
             this.serialPort5.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // timer1
@@ -862,6 +1327,14 @@
             this.Load += new System.EventHandler(this.Multi_Device_Form_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.c1Chart5)).EndInit();
             this.panel11.ResumeLayout(false);
@@ -902,16 +1375,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox SerialPort1_ComboBox;
         private System.Windows.Forms.Button SerialPort1_Button;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Total_Energy_Label_1;
+        private System.Windows.Forms.Label Partial_Average_Label_1;
+        private System.Windows.Forms.Label Partial_Max_Label_1;
+        private System.Windows.Forms.Label DisChargIng_Label_1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private C1.Win.C1Chart.C1Chart c1Chart1;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.IO.Ports.SerialPort serialPort2;
         private System.IO.Ports.SerialPort serialPort3;
         private System.IO.Ports.SerialPort serialPort4;
@@ -963,6 +1435,43 @@
         private C1.Win.C1Chart.C1Chart c1Chart3;
         private System.Windows.Forms.Panel panel9;
         private C1.Win.C1Chart.C1Chart c1Chart2;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label Total_Energy_Label_5;
+        private System.Windows.Forms.Label Partial_Average_Label_5;
+        private System.Windows.Forms.Label Partial_Max_Label_5;
+        private System.Windows.Forms.Label DisChargIng_Label_5;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label Total_Energy_Label_4;
+        private System.Windows.Forms.Label Partial_Average_Label_4;
+        private System.Windows.Forms.Label Partial_Max_Label_4;
+        private System.Windows.Forms.Label DisChargIng_Label_4;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label Total_Energy_Label_3;
+        private System.Windows.Forms.Label Partial_Average_Label_3;
+        private System.Windows.Forms.Label Partial_Max_Label_3;
+        private System.Windows.Forms.Label DisChargIng_Label_3;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label Total_Energy_Label_2;
+        private System.Windows.Forms.Label Partial_Average_Label_2;
+        private System.Windows.Forms.Label Partial_Max_Label_2;
+        private System.Windows.Forms.Label DisChargIng_Label_2;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
     }
 }
 

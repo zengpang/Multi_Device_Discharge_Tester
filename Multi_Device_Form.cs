@@ -1,4 +1,5 @@
-﻿using System;
+﻿using C1.Win.C1Chart;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,27 @@ namespace 多设备放电检测测试仪
     
     public partial class Multi_Device_Form : Form
     {
-        private byte[] ReadBytes = new byte[4000];
-        private  int DCCount = 0;
+       
+        private  int[] DCCounts;
+        
         private string Xml_Path = "Protocol.xml";
-         
+        private ChartDataArray arrHistory1;
+        private ChartDataArray arrHistory2;
+        private ChartDataArray arrHistory3;
+        private ChartDataArray arrHistory4;
+        private ChartDataArray arrHistory5;
+        private byte[] ReadBytes1 = new byte[4000];
+        private byte[] ReadBytes2 = new byte[4000];
+        private byte[] ReadBytes3 = new byte[4000];
+        private byte[] ReadBytes4 = new byte[4000];
+        private byte[] ReadBytes5 = new byte[4000];
         private string[]Protocol_Group=new string[5];
         private string[] Protocol_TitleName_Group = new string[5];
         private Protocols protocols;
         private CartogramPaint cartogramPaint;
         private SendMessageTo16Bytes sendMessageTo16Bytes;
         private Protocols_GURD_XML protocols_GURD;
-
+      
         public Multi_Device_Form()
         {
             InitializeComponent();
@@ -38,15 +49,49 @@ namespace 多设备放电检测测试仪
             sendMessageTo16Bytes = new SendMessageTo16Bytes();
             protocols_GURD = new Protocols_GURD_XML();
             protocols = new Protocols();
-
+           
+            DCCounts = new int[5];
         }
 
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            SerialPort serialPort = sender as SerialPort;
-            serialPort.Read(ReadBytes,0, serialPort.BytesToRead);
+              
+        SerialPort serialPort = sender as SerialPort;
+            //serialPort.Read(ReadBytes, 0, serialPort.BytesToRead);
+            //DCCounts[0] = (Convert.ToInt32(ReadBytes[11]) * 256 + Convert.ToInt32(ReadBytes[12])) * 3;
 
-            DCCount = (Convert.ToInt32(ReadBytes[11]) * 256 + Convert.ToInt32(ReadBytes[12])) * 3;
+
+            if (serialPort==serialPort1)
+            {
+                serialPort.Read(ReadBytes1, 0, serialPort.BytesToRead);
+                DCCounts[0] = (Convert.ToInt32(ReadBytes1[11]) * 256 + Convert.ToInt32(ReadBytes1[12])) * 3;
+                Message(DisChargIng_Label_1, Partial_Max_Label_1,Partial_Average_Label_1,Total_Energy_Label_1,ReadBytes1);
+            }
+            else if(serialPort == serialPort2)
+            {
+                serialPort.Read(ReadBytes2, 0, serialPort.BytesToRead);
+                DCCounts[1] = (Convert.ToInt32(ReadBytes2[11]) * 256 + Convert.ToInt32(ReadBytes2[12])) * 3;
+                Message(DisChargIng_Label_2, Partial_Max_Label_2, Partial_Average_Label_2, Total_Energy_Label_2, ReadBytes2);
+            }
+            else if (serialPort == serialPort3)
+            {
+                serialPort.Read(ReadBytes3, 0, serialPort.BytesToRead);
+                DCCounts[2] = (Convert.ToInt32(ReadBytes3[11]) * 256 + Convert.ToInt32(ReadBytes3[12])) * 3;
+                Message(DisChargIng_Label_3, Partial_Max_Label_3, Partial_Average_Label_3, Total_Energy_Label_3, ReadBytes3);
+            }
+            else if (serialPort == serialPort4)
+            {
+                serialPort.Read(ReadBytes4, 0, serialPort.BytesToRead);
+                DCCounts[3] = (Convert.ToInt32(ReadBytes4[11]) * 256 + Convert.ToInt32(ReadBytes4[12])) * 3;
+                Message(DisChargIng_Label_4, Partial_Max_Label_4, Partial_Average_Label_4, Total_Energy_Label_4, ReadBytes4);
+            }
+            else if (serialPort == serialPort5)
+            {
+                serialPort.Read(ReadBytes5, 0, serialPort.BytesToRead);
+                DCCounts[4] = (Convert.ToInt32(ReadBytes5[11]) * 256 + Convert.ToInt32(ReadBytes5[12])) * 3;
+                Message(DisChargIng_Label_5, Partial_Max_Label_5, Partial_Average_Label_5, Total_Energy_Label_5, ReadBytes5);
+            }
+       
         }
 
         private void timer_Send_Tick(object sender, EventArgs e)
@@ -66,7 +111,7 @@ namespace 多设备放电检测测试仪
                 case "Send_2":
                     {
                          byte[] SendProtocol = sendMessageTo16Bytes.StringTo16Bytes(Protocol_Group[1], 8);
-                        serialPort1.Write(SendProtocol, 0, 8);
+                        serialPort2.Write(SendProtocol, 0, 8);
                     }
                 ;
                     break;
@@ -74,21 +119,21 @@ namespace 多设备放电检测测试仪
                 case "Send_3":
                     {
                         byte[] SendProtocol = sendMessageTo16Bytes.StringTo16Bytes(Protocol_Group[2], 8);
-                        serialPort1.Write(SendProtocol, 0, 8);
+                        serialPort3.Write(SendProtocol, 0, 8);
                     }
                 ;
                     break;
                 case "Send_4":
                     {
                         byte[] SendProtocol = sendMessageTo16Bytes.StringTo16Bytes(Protocol_Group[3], 8);
-                        serialPort1.Write(SendProtocol, 0, 8);
+                        serialPort4.Write(SendProtocol, 0, 8);
                     }
                 ;
                     break;
                 case "Send_5":
                     {
                         byte[] SendProtocol = sendMessageTo16Bytes.StringTo16Bytes(Protocol_Group[4], 8);
-                        serialPort1.Write(SendProtocol, 0, 8);
+                        serialPort5.Write(SendProtocol, 0, 8);
                     }
                 ;
                     break;
@@ -103,37 +148,40 @@ namespace 多设备放电检测测试仪
         {
             Timer timer = sender as Timer;
             string Timer_Tag = timer.Tag as string;
+         
             timer.Stop();
+
             switch (Timer_Tag)
             {
                 case "1":
                     {
-                        cartogramPaint.RealtimeCharge(Convert.ToInt32(DCCount), ref c1Chart1);
+                        //cartogramPaint.ShiftRight();
+                        paint_2d(ref arrHistory1, ref DCCounts, 0);
                     }
                  ;
                     break;
                 case "2":
                     {
-                        cartogramPaint.RealtimeCharge(Convert.ToInt32(DCCount), ref c1Chart2);
+                        paint_2d(ref arrHistory2, ref DCCounts, 1);
                     }
                  ;
                     break;
 
                 case "3":
                     {
-                        cartogramPaint.RealtimeCharge(Convert.ToInt32(DCCount), ref c1Chart3);
+                        paint_2d(ref arrHistory3, ref DCCounts, 2);
                     }
                  ;
                     break;
                 case "4":
                     {
-                        cartogramPaint.RealtimeCharge(Convert.ToInt32(DCCount), ref c1Chart4);
+                        paint_2d(ref arrHistory4, ref DCCounts, 3);
                     }
                  ;
                     break;
                 case "5":
                     {
-                        cartogramPaint.RealtimeCharge(Convert.ToInt32(DCCount), ref c1Chart5);
+                        paint_2d(ref arrHistory5, ref DCCounts, 4);
                     }
                  ;
                     break;
@@ -141,51 +189,152 @@ namespace 多设备放电检测测试仪
 
 
             }
-            
+            //paint_2d(ref arrHistory1, ref DCCounts, 4);
             timer.Start();
         }
+        private void paint_2d(ref ChartDataArray arrhistory,ref int[]DCCounts ,int Count)
+        {
+              bool left2right = false;
+            int hits = 200;
+            if (left2right)
+            {
+                arrhistory.Length++;
 
+                // Reach the max
+                if (arrhistory.Length >= hits + 1)
+                {
+                    arrhistory.Length = 0;
+                    arrhistory.Length++;
+                }
+                arrhistory[arrhistory.Length - 1] = new PointF(arrhistory.Length - 1, Convert.ToInt32(DCCounts[Count]));
+            }
+            else
+            {
+                if (arrhistory.Length <= hits + 1)
+                    arrhistory.Length++;
+                //ShiftRight(arrHistory);
+                cartogramPaint.ShiftRight(ref arrhistory);
+
+                arrhistory[0] = new PointF(0, Convert.ToInt32(DCCounts[Count]));
+            }
+
+            DCCounts[Count] = 0;//清空实时放电量数据
+        }
         private void SerialPort_Button_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
             string Btn_Name = button.Name;
-            SerialPort_Button_StatusChange(button);
-            switch (Btn_Name)
+            string Btn_Text = button.Text;
+           
+            if(Btn_Text=="打开串口")
             {
-                case "SerialPort1_Button":
-                    {
-                        SerialPort_OpenSeting(serialPort1, SerialPort1_ComboBox.Text.Trim());
-                    }
-                    ;
-                    break;
-                case "SerialPort2_Button":
-                    {
-                        SerialPort_OpenSeting(serialPort2, SerialPort2_ComboBox.Text.Trim());
-                    }
-                    ;
-                    break;
+                switch (Btn_Name)
+                {
+                    case "SerialPort1_Button":
+                        {
+                            SerialPort_OpenSeting(serialPort1, SerialPort1_ComboBox.Text.Trim());
+                            Timer_Send_1.Enabled = true;
+                            timer1.Enabled = true;
+                            Timer_Send_1.Start();
+                            //Timer_Send_2.Start();
+                            //Timer_Send_3.Start();
+                            //Timer_Send_4.Start();
+                            //Timer_Send_5.Start();
+                        }
+                        ;
+                        break;
+                    case "SerialPort2_Button":
+                        {
+                            SerialPort_OpenSeting(serialPort2, SerialPort2_ComboBox.Text.Trim());
+                            Timer_Send_2.Enabled = true;
+                            timer2.Enabled = true;
+                            Timer_Send_2.Start();
+                        }
+                        ;
+                        break;
 
-                case "SerialPort3_Button":
-                    {
-                        SerialPort_OpenSeting(serialPort3, SerialPort3_ComboBox.Text.Trim());
-                    }
-                    ;
-                    break;
-                case "SerialPort4_Button":
-                    {
-                        SerialPort_OpenSeting(serialPort4, SerialPort4_ComboBox.Text.Trim());
-                    }
-                    ;
-                    break;
-                case "SerialPort5_Button":
-                    {
-                        SerialPort_OpenSeting(serialPort5, SerialPort5_ComboBox.Text.Trim());
-                    }
-                    ;
-                    break;
+                    case "SerialPort3_Button":
+                        {
+                            SerialPort_OpenSeting(serialPort3, SerialPort3_ComboBox.Text.Trim());
+                            Timer_Send_3.Enabled = true;
+                            timer3.Enabled = true;
+                            Timer_Send_3.Start();
+                        }
+                        ;
+                        break;
+                    case "SerialPort4_Button":
+                        {
+                            SerialPort_OpenSeting(serialPort4, SerialPort4_ComboBox.Text.Trim());
+                            Timer_Send_4.Enabled = true;
+                            timer4.Enabled = true;
+                            Timer_Send_4.Start();
+                        }
+                        ;
+                        break;
+                    case "SerialPort5_Button":
+                        {
+                            SerialPort_OpenSeting(serialPort5, SerialPort5_ComboBox.Text.Trim());
+                            Timer_Send_5.Enabled = true;
+                            timer5.Enabled = true;
+                            Timer_Send_5.Start();
+                        }
+                        ;
+                        break;
+                }
 
+                SerialPort_Button_StatusChange(button);
+            }
+            else
+            {
+                //switch (Btn_Name)
+                //{
+                //    case "SerialPort1_Button":
+                //        {
+                          
+                //            Timer_Send_1.Enabled = false;
+                //            timer1.Enabled = false;
+                //            serialPort1.Close();
+                //            //Timer_Send_2.Start();
+                //            //Timer_Send_3.Start();
+                //            //Timer_Send_4.Start();
+                //            //Timer_Send_5.Start();
+                //        }
+                //       ;
+                //        break;
+                //    case "SerialPort2_Button":
+                //        {
+                //            Timer_Send_2.Enabled = false;
+                //            timer2.Enabled = false;
+                //            serialPort2.Close();
+                //        }
+                //       ;
+                //        break;
 
-
+                //    case "SerialPort3_Button":
+                //        {
+                //            Timer_Send_3.Enabled = false;
+                //            timer3.Enabled = false;
+                //            serialPort3.Close();
+                //        }
+                //       ;
+                //        break;
+                //    case "SerialPort4_Button":
+                //        {
+                //            Timer_Send_4.Enabled = false;
+                //            timer4.Enabled = false;
+                //            serialPort4.Close();
+                //        }
+                //       ;
+                //        break;
+                //    case "SerialPort5_Button":
+                //        {
+                //            Timer_Send_5.Enabled = false;
+                //            timer5.Enabled = false;
+                //            serialPort5.Close();
+                //        }
+                //       ;
+                //        break;
+                //}
             }
         }
         private void SerialPort_Button_StatusChange( Button btn)
@@ -196,7 +345,16 @@ namespace 多设备放电检测测试仪
         private void SerialPort_OpenSeting(SerialPort serialPort,string text)
         {
             serialPort.PortName = text;
-            serialPort.Open();
+            try
+            {
+                serialPort.Open();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+           
+
 
         }
         private void SetSave(SerialPort serialPort,int BaudRadte,Timer timer,int inteval)
@@ -226,6 +384,10 @@ namespace 多设备放电检测测试仪
                 
                 Protocols protocols = new Protocols();
                 protocols.Protocolist.Add(new ProtocolSingle("红外线", "ee e1 01 55 ff fc fd ff"));
+                protocols.Protocolist.Add(new ProtocolSingle("特高频", "01 03 00 1A 00 0A E4 0A"));
+                protocols.Protocolist.Add(new ProtocolSingle("高频电流", "01 03 00 24 00 0A 85 C6"));
+                protocols.Protocolist.Add(new ProtocolSingle("低压故障电弧", "01 03 00 2E 00 0A A5 C4"));
+                protocols.Protocolist.Add(new ProtocolSingle("二合一", "01 03 00 38 00 0A 44 00"));
                 protocols_GURD.Protocol_Save(protocols,Xml_Path);
 
 
@@ -238,7 +400,13 @@ namespace 多设备放电检测测试仪
                 Protocol_TitleName_ComboBox.Items.Add(protocol.ProtocolName);
 
             }
-       
+            cartogramPaint.CartogramInitialized(ref c1Chart1, ref arrHistory1);
+            cartogramPaint.CartogramInitialized(ref c1Chart2, ref arrHistory2);
+            cartogramPaint.CartogramInitialized(ref c1Chart3, ref arrHistory3);
+            cartogramPaint.CartogramInitialized(ref c1Chart4, ref arrHistory4);
+            cartogramPaint.CartogramInitialized(ref c1Chart5, ref arrHistory5);
+
+
 
         }
 
@@ -246,9 +414,10 @@ namespace 多设备放电检测测试仪
         {
             for(int i=0;i<Protocol_TitleName_ComboBox.Items.Count;i++)
             {
-                if(Protocol_TitleName_ComboBox.Items[i].ToString()== protocols.Protocolist[i].ProtocolName)
+                if(Protocol_TitleName_ComboBox.Text== protocols.Protocolist[i].ProtocolName)
                 {
                     Protocol_Content_TextBox.Text = protocols.Protocolist[i].ProtocolContent;
+                    break;
                 }
             }
         }
@@ -305,6 +474,7 @@ namespace 多设备放电检测测试仪
 
 
             }
+            MessageBox.Show("保存成功");
         }
 
         private void Equipment_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -372,6 +542,13 @@ namespace 多设备放电检测测试仪
             {
                 Protocol_TitleName_ComboBox_SelectedIndexChanged(sender, e);
             }
+        }
+        private void Message(System.Windows.Forms.Label DisChargIng_Label, System.Windows.Forms.Label Partial_Max_Label, System.Windows.Forms.Label Partial_Average_Label, System.Windows.Forms.Label Total_Energy_Label, byte[] ReadBytes)
+        {
+            DisChargIng_Label.Text = ((Convert.ToInt32(ReadBytes[5]) * 256 + Convert.ToInt32(ReadBytes[6])) * 3).ToString();
+            Partial_Max_Label.Text = ((Convert.ToInt32(ReadBytes[7]) * 256 + Convert.ToInt32(ReadBytes[8])) * 5).ToString() + " PC";
+            Partial_Average_Label.Text = ((Convert.ToInt32(ReadBytes[9]) * 256 + Convert.ToInt32(ReadBytes[10])) * 5).ToString() + " PC";
+            Total_Energy_Label.Text = ((Convert.ToInt32(ReadBytes[11]) * 256 + Convert.ToInt32(ReadBytes[12])) * 3).ToString();
         }
     }
 }
