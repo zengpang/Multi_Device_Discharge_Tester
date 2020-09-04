@@ -13,7 +13,9 @@ using System.Windows.Forms;
 using 多设备放电检测测试仪.Protocol;
 using 多设备放电检测测试仪.Protocols_Operation;
 using 工作工具库.Cartogram;
+using 工作工具库.File_Operation;
 using 工作工具库.Protocol_Operation;
+using 工作工具库.Window_Operation;
 
 namespace 多设备放电检测测试仪
 {
@@ -40,7 +42,8 @@ namespace 多设备放电检测测试仪
         private CartogramPaint cartogramPaint;
         private SendMessageTo16Bytes sendMessageTo16Bytes;
         private Protocols_GURD_XML protocols_GURD;
-      
+        private string Txt_Path = "WindowsName.txt";
+        private FileCRUD fileCRUD = new FileCRUD();
         public Multi_Device_Form()
         {
             InitializeComponent();
@@ -361,6 +364,9 @@ namespace 多设备放电检测测试仪
         {
             serialPort.BaudRate = BaudRadte;
             timer.Interval = inteval;
+            Equipment_Status_Change(Equipment1_BaudRate_Label, "串口波特率：" + Convert.ToString(BaudRadte));
+            Equipment_Status_Change(Equipment1_Inteval_Label, "设备发送时间间隔："+Convert.ToString(inteval).Trim());
+
 
         }
         private void ComboBox_StartSeting(ComboBox comboBox)
@@ -374,6 +380,8 @@ namespace 多设备放电检测测试仪
 
         private void Multi_Device_Form_Load(object sender, EventArgs e)
         {
+            
+
             ComboBox_StartSeting(SerialPort1_ComboBox);
             ComboBox_StartSeting(SerialPort2_ComboBox);
             ComboBox_StartSeting(SerialPort3_ComboBox);
@@ -383,17 +391,27 @@ namespace 多设备放电检测测试仪
             {
                 
                 Protocols protocols = new Protocols();
-                protocols.Protocolist.Add(new ProtocolSingle("红外线", "ee e1 01 55 ff fc fd ff"));
+               
                 protocols.Protocolist.Add(new ProtocolSingle("特高频", "01 03 00 1A 00 0A E4 0A"));
                 protocols.Protocolist.Add(new ProtocolSingle("高频电流", "01 03 00 24 00 0A 85 C6"));
                 protocols.Protocolist.Add(new ProtocolSingle("低压故障电弧", "01 03 00 2E 00 0A A5 C4"));
                 protocols.Protocolist.Add(new ProtocolSingle("二合一", "01 03 00 38 00 0A 44 00"));
+                protocols.Protocolist.Add(new ProtocolSingle("1号传感器", "01 03 00 10 00 0A C4 08"));
+                protocols.Protocolist.Add(new ProtocolSingle("2号传感器", "01 03 00 1A 00 0A E4 0A"));
                 protocols_GURD.Protocol_Save(protocols,Xml_Path);
 
 
 
             }
-         
+            if(File.Exists(Txt_Path))
+            {
+                this.Text=fileCRUD.Read(Txt_Path,Encoding.UTF8);
+            }
+            else
+            {
+                fileCRUD.Write(Txt_Path, "");
+            }
+            
                 protocols = protocols_GURD.Load(Xml_Path);
                 foreach(ProtocolSingle protocol in protocols.Protocolist)
             {
@@ -433,6 +451,8 @@ namespace 多设备放电检测测试仪
                         SetSave(serialPort1, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_1, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[0]= Protocol_Content_TextBox.Text.Trim();
                         Protocol_TitleName_Group[0] = Protocol_TitleName_ComboBox.Text.Trim();
+                        Equipment_Status_Change(Equipment1_ProtocolName_Label, "协议名："+Protocol_TitleName_Group[0]);
+                        Equipment_Status_Change(Equipment1_ProtoclContent_Label, "协议内容：" + Protocol_Group[0]);
 
                     }
                    ;
@@ -442,6 +462,8 @@ namespace 多设备放电检测测试仪
                         SetSave(serialPort2, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_2, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[1] = Protocol_Content_TextBox.Text.Trim();
                         Protocol_TitleName_Group[1] = Protocol_TitleName_ComboBox.Text.Trim();
+                        Equipment_Status_Change(Equipment2_ProtocolName_Label, "协议名：" + Protocol_TitleName_Group[1]);
+                        Equipment_Status_Change(Equipment2_ProtoclContent_Label, "协议内容：" + Protocol_Group[1]);
                     }
                    ;
                     break;
@@ -451,6 +473,8 @@ namespace 多设备放电检测测试仪
                         SetSave(serialPort3, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_3, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[2] = Protocol_Content_TextBox.Text.Trim();
                         Protocol_TitleName_Group[2] = Protocol_TitleName_ComboBox.Text.Trim();
+                        Equipment_Status_Change(Equipment3_ProtocolName_Label, "协议名：" + Protocol_TitleName_Group[2]);
+                        Equipment_Status_Change(Equipment3_ProtoclContent_Label, "协议内容：" + Protocol_Group[2]);
                     }
                    ;
                     break;
@@ -459,6 +483,8 @@ namespace 多设备放电检测测试仪
                         SetSave(serialPort4, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_4, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[3] = Protocol_Content_TextBox.Text.Trim();
                         Protocol_TitleName_Group[3] = Protocol_TitleName_ComboBox.Text.Trim();
+                        Equipment_Status_Change(Equipment4_ProtocolName_Label, "协议名：" + Protocol_TitleName_Group[3]);
+                        Equipment_Status_Change(Equipment4_ProtoclContent_Label, "协议内容：" + Protocol_Group[3]);
                     }
                    ;
                     break;
@@ -467,6 +493,8 @@ namespace 多设备放电检测测试仪
                         SetSave(serialPort5, Convert.ToInt32(SerialPort_BaudRate_ComboBox.Text.Trim()), Timer_Send_5, Convert.ToInt32(Timer_Intevel_ComboBox.Text.Trim()));
                         Protocol_Group[4] = Protocol_Content_TextBox.Text.Trim();
                         Protocol_TitleName_Group[4] = Protocol_TitleName_ComboBox.Text.Trim();
+                        Equipment_Status_Change(Equipment5_ProtocolName_Label, "协议名:" + Protocol_TitleName_Group[4]);
+                        Equipment_Status_Change(Equipment5_ProtoclContent_Label, "协议内容:" + Protocol_Group[4]);
                     }
                    ;
                     break;
@@ -474,6 +502,12 @@ namespace 多设备放电检测测试仪
 
 
             }
+            if(WIndowName_TextBox.Text.Trim()!=null)
+            {
+                fileCRUD.Write(Txt_Path, WIndowName_TextBox.Text.Trim());
+                this.Text = WIndowName_TextBox.Text.Trim();
+            }
+           
             MessageBox.Show("保存成功");
         }
 
@@ -535,9 +569,9 @@ namespace 多设备放电检测测试仪
 
 
             }
-            SerialPort_BaudRate_ComboBox.Text = "  " + BaudRateText.Trim();
-            Timer_Intevel_ComboBox.Text = " " + TimerIntevelText.Trim();
-            Protocol_TitleName_ComboBox.Text = " " + ProtocolText;
+            SerialPort_BaudRate_ComboBox.Text = BaudRateText.Trim();
+            Timer_Intevel_ComboBox.Text =TimerIntevelText.Trim();
+            Protocol_TitleName_ComboBox.Text =  ProtocolText;
             if(ProtocolText!=null)
             {
                 Protocol_TitleName_ComboBox_SelectedIndexChanged(sender, e);
@@ -549,6 +583,20 @@ namespace 多设备放电检测测试仪
             Partial_Max_Label.Text = ((Convert.ToInt32(ReadBytes[7]) * 256 + Convert.ToInt32(ReadBytes[8])) * 5).ToString() + " PC";
             Partial_Average_Label.Text = ((Convert.ToInt32(ReadBytes[9]) * 256 + Convert.ToInt32(ReadBytes[10])) * 5).ToString() + " PC";
             Total_Energy_Label.Text = ((Convert.ToInt32(ReadBytes[11]) * 256 + Convert.ToInt32(ReadBytes[12])) * 3).ToString();
+        }
+        private void Equipment_Status_Change(System.Windows.Forms.Label Equipment_Label,string Equipment_Text)
+
+        {
+            if(Equipment_Text!=null)
+            {
+                Equipment_Label.Text = Equipment_Text;
+
+            }
+        }
+
+        private void Equipment5_ProtoclContent_Label_SizeChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

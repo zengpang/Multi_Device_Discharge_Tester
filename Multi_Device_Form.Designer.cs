@@ -108,6 +108,37 @@
             this.SerialPort1_ComboBox = new System.Windows.Forms.ComboBox();
             this.SerialPort1_Button = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Equipment5_ProtoclContent_Label = new System.Windows.Forms.Label();
+            this.Equipment5_ProtocolName_Label = new System.Windows.Forms.Label();
+            this.Equipment5_Inteval_Label = new System.Windows.Forms.Label();
+            this.Equipment5_BaudRate_Label = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Equipment4_ProtoclContent_Label = new System.Windows.Forms.Label();
+            this.Equipment4_ProtocolName_Label = new System.Windows.Forms.Label();
+            this.Equipment4_Inteval_Label = new System.Windows.Forms.Label();
+            this.Equipment4_BaudRate_Label = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Equipment3_ProtoclContent_Label = new System.Windows.Forms.Label();
+            this.Equipment3_ProtocolName_Label = new System.Windows.Forms.Label();
+            this.Equipment3_Inteval_Label = new System.Windows.Forms.Label();
+            this.Equipment3_BaudRate_Label = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Equipment2_ProtoclContent_Label = new System.Windows.Forms.Label();
+            this.Equipment2_ProtocolName_Label = new System.Windows.Forms.Label();
+            this.Equipment2_Inteval_Label = new System.Windows.Forms.Label();
+            this.Equipment2_BaudRate_Label = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Equipment1_ProtoclContent_Label = new System.Windows.Forms.Label();
+            this.Equipment1_ProtocolName_Label = new System.Windows.Forms.Label();
+            this.Equipment1_Inteval_Label = new System.Windows.Forms.Label();
+            this.Equipment1_BaudRate_Label = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Protocol_Content_TextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -117,7 +148,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Protocol_TitleName_ComboBox = new System.Windows.Forms.ComboBox();
             this.SaveSet_Button = new System.Windows.Forms.Button();
-            this.Timer_Intevel_ComboBox = new System.Windows.Forms.ComboBox();
             this.SerialPort_BaudRate_ComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Equipment_ComboBox = new System.Windows.Forms.ComboBox();
@@ -136,6 +166,9 @@
             this.Timer_Send_3 = new System.Windows.Forms.Timer(this.components);
             this.Timer_Send_4 = new System.Windows.Forms.Timer(this.components);
             this.Timer_Send_5 = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Intevel_ComboBox = new System.Windows.Forms.TextBox();
+            this.WIndowName_TextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -159,6 +192,12 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,7 +209,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1184, 862);
+            this.tabControl1.Size = new System.Drawing.Size(1284, 862);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -194,7 +233,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1176, 836);
+            this.tabPage1.Size = new System.Drawing.Size(1276, 836);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "放电检测";
             // 
@@ -620,7 +659,7 @@
             this.panel12.Controls.Add(this.c1Chart5);
             this.panel12.Location = new System.Drawing.Point(422, 694);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(711, 131);
+            this.panel12.Size = new System.Drawing.Size(842, 131);
             this.panel12.TabIndex = 12;
             // 
             // c1Chart5
@@ -637,7 +676,7 @@
             this.c1Chart5.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart5.Name = "c1Chart5";
             this.c1Chart5.PropBag = resources.GetString("c1Chart5.PropBag");
-            this.c1Chart5.Size = new System.Drawing.Size(709, 131);
+            this.c1Chart5.Size = new System.Drawing.Size(840, 131);
             this.c1Chart5.TabIndex = 31;
             // 
             // panel11
@@ -646,7 +685,7 @@
             this.panel11.Controls.Add(this.c1Chart4);
             this.panel11.Location = new System.Drawing.Point(421, 531);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(711, 131);
+            this.panel11.Size = new System.Drawing.Size(844, 131);
             this.panel11.TabIndex = 11;
             // 
             // c1Chart4
@@ -663,7 +702,7 @@
             this.c1Chart4.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart4.Name = "c1Chart4";
             this.c1Chart4.PropBag = resources.GetString("c1Chart4.PropBag");
-            this.c1Chart4.Size = new System.Drawing.Size(709, 131);
+            this.c1Chart4.Size = new System.Drawing.Size(842, 131);
             this.c1Chart4.TabIndex = 31;
             // 
             // panel10
@@ -672,7 +711,7 @@
             this.panel10.Controls.Add(this.c1Chart3);
             this.panel10.Location = new System.Drawing.Point(420, 364);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(711, 131);
+            this.panel10.Size = new System.Drawing.Size(846, 131);
             this.panel10.TabIndex = 10;
             // 
             // c1Chart3
@@ -689,7 +728,7 @@
             this.c1Chart3.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart3.Name = "c1Chart3";
             this.c1Chart3.PropBag = resources.GetString("c1Chart3.PropBag");
-            this.c1Chart3.Size = new System.Drawing.Size(709, 131);
+            this.c1Chart3.Size = new System.Drawing.Size(844, 131);
             this.c1Chart3.TabIndex = 31;
             // 
             // panel9
@@ -698,7 +737,7 @@
             this.panel9.Controls.Add(this.c1Chart2);
             this.panel9.Location = new System.Drawing.Point(419, 197);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(711, 131);
+            this.panel9.Size = new System.Drawing.Size(848, 131);
             this.panel9.TabIndex = 9;
             // 
             // c1Chart2
@@ -715,7 +754,7 @@
             this.c1Chart2.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart2.Name = "c1Chart2";
             this.c1Chart2.PropBag = resources.GetString("c1Chart2.PropBag");
-            this.c1Chart2.Size = new System.Drawing.Size(709, 131);
+            this.c1Chart2.Size = new System.Drawing.Size(846, 131);
             this.c1Chart2.TabIndex = 31;
             // 
             // panel8
@@ -883,7 +922,7 @@
             this.panel4.Controls.Add(this.c1Chart1);
             this.panel4.Location = new System.Drawing.Point(420, 32);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(711, 131);
+            this.panel4.Size = new System.Drawing.Size(848, 131);
             this.panel4.TabIndex = 4;
             // 
             // c1Chart1
@@ -900,7 +939,7 @@
             this.c1Chart1.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart1.Name = "c1Chart1";
             this.c1Chart1.PropBag = resources.GetString("c1Chart1.PropBag");
-            this.c1Chart1.Size = new System.Drawing.Size(709, 131);
+            this.c1Chart1.Size = new System.Drawing.Size(846, 131);
             this.c1Chart1.TabIndex = 31;
             // 
             // panel2
@@ -1050,17 +1089,390 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
+            this.tabPage2.Controls.Add(this.panel17);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1176, 836);
+            this.tabPage2.Size = new System.Drawing.Size(1276, 836);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "系统设置";
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel17.Controls.Add(this.groupBox5);
+            this.panel17.Controls.Add(this.groupBox4);
+            this.panel17.Controls.Add(this.groupBox3);
+            this.panel17.Controls.Add(this.groupBox2);
+            this.panel17.Controls.Add(this.groupBox1);
+            this.panel17.Location = new System.Drawing.Point(6, 234);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1262, 594);
+            this.panel17.TabIndex = 1;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.Equipment5_ProtoclContent_Label);
+            this.groupBox5.Controls.Add(this.Equipment5_ProtocolName_Label);
+            this.groupBox5.Controls.Add(this.Equipment5_Inteval_Label);
+            this.groupBox5.Controls.Add(this.Equipment5_BaudRate_Label);
+            this.groupBox5.Controls.Add(this.label52);
+            this.groupBox5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(8, 493);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "设备5";
+            // 
+            // Equipment5_ProtoclContent_Label
+            // 
+            this.Equipment5_ProtoclContent_Label.AutoSize = true;
+            this.Equipment5_ProtoclContent_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment5_ProtoclContent_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment5_ProtoclContent_Label.Location = new System.Drawing.Point(809, 37);
+            this.Equipment5_ProtoclContent_Label.Name = "Equipment5_ProtoclContent_Label";
+            this.Equipment5_ProtoclContent_Label.Size = new System.Drawing.Size(169, 19);
+            this.Equipment5_ProtoclContent_Label.TabIndex = 19;
+            this.Equipment5_ProtoclContent_Label.Text = "协议内容：未设置";
+            this.Equipment5_ProtoclContent_Label.SizeChanged += new System.EventHandler(this.Equipment5_ProtoclContent_Label_SizeChanged);
+            // 
+            // Equipment5_ProtocolName_Label
+            // 
+            this.Equipment5_ProtocolName_Label.AutoSize = true;
+            this.Equipment5_ProtocolName_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment5_ProtocolName_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment5_ProtocolName_Label.Location = new System.Drawing.Point(625, 37);
+            this.Equipment5_ProtocolName_Label.Name = "Equipment5_ProtocolName_Label";
+            this.Equipment5_ProtocolName_Label.Size = new System.Drawing.Size(149, 19);
+            this.Equipment5_ProtocolName_Label.TabIndex = 18;
+            this.Equipment5_ProtocolName_Label.Text = "协议名：未设置";
+            // 
+            // Equipment5_Inteval_Label
+            // 
+            this.Equipment5_Inteval_Label.AutoSize = true;
+            this.Equipment5_Inteval_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment5_Inteval_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment5_Inteval_Label.Location = new System.Drawing.Point(387, 37);
+            this.Equipment5_Inteval_Label.Name = "Equipment5_Inteval_Label";
+            this.Equipment5_Inteval_Label.Size = new System.Drawing.Size(222, 19);
+            this.Equipment5_Inteval_Label.TabIndex = 17;
+            this.Equipment5_Inteval_Label.Text = "设备发送时间间隔：300";
+            // 
+            // Equipment5_BaudRate_Label
+            // 
+            this.Equipment5_BaudRate_Label.AutoSize = true;
+            this.Equipment5_BaudRate_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment5_BaudRate_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment5_BaudRate_Label.Location = new System.Drawing.Point(186, 37);
+            this.Equipment5_BaudRate_Label.Name = "Equipment5_BaudRate_Label";
+            this.Equipment5_BaudRate_Label.Size = new System.Drawing.Size(195, 19);
+            this.Equipment5_BaudRate_Label.TabIndex = 16;
+            this.Equipment5_BaudRate_Label.Text = "串口波特率：115200";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label52.ForeColor = System.Drawing.Color.Yellow;
+            this.label52.Location = new System.Drawing.Point(20, 37);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(160, 19);
+            this.label52.TabIndex = 15;
+            this.label52.Text = "设备序号：设备5";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.Equipment4_ProtoclContent_Label);
+            this.groupBox4.Controls.Add(this.Equipment4_ProtocolName_Label);
+            this.groupBox4.Controls.Add(this.Equipment4_Inteval_Label);
+            this.groupBox4.Controls.Add(this.Equipment4_BaudRate_Label);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(8, 368);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "设备4";
+            // 
+            // Equipment4_ProtoclContent_Label
+            // 
+            this.Equipment4_ProtoclContent_Label.AutoSize = true;
+            this.Equipment4_ProtoclContent_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment4_ProtoclContent_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment4_ProtoclContent_Label.Location = new System.Drawing.Point(809, 47);
+            this.Equipment4_ProtoclContent_Label.Name = "Equipment4_ProtoclContent_Label";
+            this.Equipment4_ProtoclContent_Label.Size = new System.Drawing.Size(169, 19);
+            this.Equipment4_ProtoclContent_Label.TabIndex = 19;
+            this.Equipment4_ProtoclContent_Label.Text = "协议内容：未设置";
+            // 
+            // Equipment4_ProtocolName_Label
+            // 
+            this.Equipment4_ProtocolName_Label.AutoSize = true;
+            this.Equipment4_ProtocolName_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment4_ProtocolName_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment4_ProtocolName_Label.Location = new System.Drawing.Point(625, 47);
+            this.Equipment4_ProtocolName_Label.Name = "Equipment4_ProtocolName_Label";
+            this.Equipment4_ProtocolName_Label.Size = new System.Drawing.Size(149, 19);
+            this.Equipment4_ProtocolName_Label.TabIndex = 18;
+            this.Equipment4_ProtocolName_Label.Text = "协议名：未设置";
+            // 
+            // Equipment4_Inteval_Label
+            // 
+            this.Equipment4_Inteval_Label.AutoSize = true;
+            this.Equipment4_Inteval_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment4_Inteval_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment4_Inteval_Label.Location = new System.Drawing.Point(387, 47);
+            this.Equipment4_Inteval_Label.Name = "Equipment4_Inteval_Label";
+            this.Equipment4_Inteval_Label.Size = new System.Drawing.Size(222, 19);
+            this.Equipment4_Inteval_Label.TabIndex = 17;
+            this.Equipment4_Inteval_Label.Text = "设备发送时间间隔：300";
+            // 
+            // Equipment4_BaudRate_Label
+            // 
+            this.Equipment4_BaudRate_Label.AutoSize = true;
+            this.Equipment4_BaudRate_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment4_BaudRate_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment4_BaudRate_Label.Location = new System.Drawing.Point(186, 47);
+            this.Equipment4_BaudRate_Label.Name = "Equipment4_BaudRate_Label";
+            this.Equipment4_BaudRate_Label.Size = new System.Drawing.Size(195, 19);
+            this.Equipment4_BaudRate_Label.TabIndex = 16;
+            this.Equipment4_BaudRate_Label.Text = "串口波特率：115200";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.ForeColor = System.Drawing.Color.Yellow;
+            this.label39.Location = new System.Drawing.Point(20, 47);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(160, 19);
+            this.label39.TabIndex = 15;
+            this.label39.Text = "设备序号：设备4";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Equipment3_ProtoclContent_Label);
+            this.groupBox3.Controls.Add(this.Equipment3_ProtocolName_Label);
+            this.groupBox3.Controls.Add(this.Equipment3_Inteval_Label);
+            this.groupBox3.Controls.Add(this.Equipment3_BaudRate_Label);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(8, 248);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "设备3";
+            // 
+            // Equipment3_ProtoclContent_Label
+            // 
+            this.Equipment3_ProtoclContent_Label.AutoSize = true;
+            this.Equipment3_ProtoclContent_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment3_ProtoclContent_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment3_ProtoclContent_Label.Location = new System.Drawing.Point(809, 44);
+            this.Equipment3_ProtoclContent_Label.Name = "Equipment3_ProtoclContent_Label";
+            this.Equipment3_ProtoclContent_Label.Size = new System.Drawing.Size(169, 19);
+            this.Equipment3_ProtoclContent_Label.TabIndex = 14;
+            this.Equipment3_ProtoclContent_Label.Text = "协议内容：未设置";
+            // 
+            // Equipment3_ProtocolName_Label
+            // 
+            this.Equipment3_ProtocolName_Label.AutoSize = true;
+            this.Equipment3_ProtocolName_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment3_ProtocolName_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment3_ProtocolName_Label.Location = new System.Drawing.Point(625, 44);
+            this.Equipment3_ProtocolName_Label.Name = "Equipment3_ProtocolName_Label";
+            this.Equipment3_ProtocolName_Label.Size = new System.Drawing.Size(149, 19);
+            this.Equipment3_ProtocolName_Label.TabIndex = 13;
+            this.Equipment3_ProtocolName_Label.Text = "协议名：未设置";
+            // 
+            // Equipment3_Inteval_Label
+            // 
+            this.Equipment3_Inteval_Label.AutoSize = true;
+            this.Equipment3_Inteval_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment3_Inteval_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment3_Inteval_Label.Location = new System.Drawing.Point(387, 44);
+            this.Equipment3_Inteval_Label.Name = "Equipment3_Inteval_Label";
+            this.Equipment3_Inteval_Label.Size = new System.Drawing.Size(222, 19);
+            this.Equipment3_Inteval_Label.TabIndex = 12;
+            this.Equipment3_Inteval_Label.Text = "设备发送时间间隔：300";
+            // 
+            // Equipment3_BaudRate_Label
+            // 
+            this.Equipment3_BaudRate_Label.AutoSize = true;
+            this.Equipment3_BaudRate_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment3_BaudRate_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment3_BaudRate_Label.Location = new System.Drawing.Point(186, 44);
+            this.Equipment3_BaudRate_Label.Name = "Equipment3_BaudRate_Label";
+            this.Equipment3_BaudRate_Label.Size = new System.Drawing.Size(195, 19);
+            this.Equipment3_BaudRate_Label.TabIndex = 11;
+            this.Equipment3_BaudRate_Label.Text = "串口波特率：115200";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.ForeColor = System.Drawing.Color.Yellow;
+            this.label30.Location = new System.Drawing.Point(20, 44);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(160, 19);
+            this.label30.TabIndex = 10;
+            this.label30.Text = "设备序号：设备3";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Equipment2_ProtoclContent_Label);
+            this.groupBox2.Controls.Add(this.Equipment2_ProtocolName_Label);
+            this.groupBox2.Controls.Add(this.Equipment2_Inteval_Label);
+            this.groupBox2.Controls.Add(this.Equipment2_BaudRate_Label);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(12, 138);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1247, 98);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "设备2";
+            // 
+            // Equipment2_ProtoclContent_Label
+            // 
+            this.Equipment2_ProtoclContent_Label.AutoSize = true;
+            this.Equipment2_ProtoclContent_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment2_ProtoclContent_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment2_ProtoclContent_Label.Location = new System.Drawing.Point(805, 40);
+            this.Equipment2_ProtoclContent_Label.Name = "Equipment2_ProtoclContent_Label";
+            this.Equipment2_ProtoclContent_Label.Size = new System.Drawing.Size(169, 19);
+            this.Equipment2_ProtoclContent_Label.TabIndex = 9;
+            this.Equipment2_ProtoclContent_Label.Text = "协议内容：未设置";
+            // 
+            // Equipment2_ProtocolName_Label
+            // 
+            this.Equipment2_ProtocolName_Label.AutoSize = true;
+            this.Equipment2_ProtocolName_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment2_ProtocolName_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment2_ProtocolName_Label.Location = new System.Drawing.Point(621, 40);
+            this.Equipment2_ProtocolName_Label.Name = "Equipment2_ProtocolName_Label";
+            this.Equipment2_ProtocolName_Label.Size = new System.Drawing.Size(149, 19);
+            this.Equipment2_ProtocolName_Label.TabIndex = 8;
+            this.Equipment2_ProtocolName_Label.Text = "协议名：未设置";
+            // 
+            // Equipment2_Inteval_Label
+            // 
+            this.Equipment2_Inteval_Label.AutoSize = true;
+            this.Equipment2_Inteval_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment2_Inteval_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment2_Inteval_Label.Location = new System.Drawing.Point(383, 40);
+            this.Equipment2_Inteval_Label.Name = "Equipment2_Inteval_Label";
+            this.Equipment2_Inteval_Label.Size = new System.Drawing.Size(222, 19);
+            this.Equipment2_Inteval_Label.TabIndex = 7;
+            this.Equipment2_Inteval_Label.Text = "设备发送时间间隔：300";
+            // 
+            // Equipment2_BaudRate_Label
+            // 
+            this.Equipment2_BaudRate_Label.AutoSize = true;
+            this.Equipment2_BaudRate_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment2_BaudRate_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment2_BaudRate_Label.Location = new System.Drawing.Point(182, 40);
+            this.Equipment2_BaudRate_Label.Name = "Equipment2_BaudRate_Label";
+            this.Equipment2_BaudRate_Label.Size = new System.Drawing.Size(195, 19);
+            this.Equipment2_BaudRate_Label.TabIndex = 6;
+            this.Equipment2_BaudRate_Label.Text = "串口波特率：115200";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.ForeColor = System.Drawing.Color.Yellow;
+            this.label21.Location = new System.Drawing.Point(16, 40);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(160, 19);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "设备序号：设备2";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Equipment1_ProtoclContent_Label);
+            this.groupBox1.Controls.Add(this.Equipment1_ProtocolName_Label);
+            this.groupBox1.Controls.Add(this.Equipment1_Inteval_Label);
+            this.groupBox1.Controls.Add(this.Equipment1_BaudRate_Label);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1247, 98);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "设备1";
+            // 
+            // Equipment1_ProtoclContent_Label
+            // 
+            this.Equipment1_ProtoclContent_Label.AutoSize = true;
+            this.Equipment1_ProtoclContent_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment1_ProtoclContent_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment1_ProtoclContent_Label.Location = new System.Drawing.Point(805, 47);
+            this.Equipment1_ProtoclContent_Label.Name = "Equipment1_ProtoclContent_Label";
+            this.Equipment1_ProtoclContent_Label.Size = new System.Drawing.Size(169, 19);
+            this.Equipment1_ProtoclContent_Label.TabIndex = 4;
+            this.Equipment1_ProtoclContent_Label.Text = "协议内容：未设置";
+            // 
+            // Equipment1_ProtocolName_Label
+            // 
+            this.Equipment1_ProtocolName_Label.AutoSize = true;
+            this.Equipment1_ProtocolName_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment1_ProtocolName_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment1_ProtocolName_Label.Location = new System.Drawing.Point(621, 47);
+            this.Equipment1_ProtocolName_Label.Name = "Equipment1_ProtocolName_Label";
+            this.Equipment1_ProtocolName_Label.Size = new System.Drawing.Size(149, 19);
+            this.Equipment1_ProtocolName_Label.TabIndex = 3;
+            this.Equipment1_ProtocolName_Label.Text = "协议名：未设置";
+            // 
+            // Equipment1_Inteval_Label
+            // 
+            this.Equipment1_Inteval_Label.AutoSize = true;
+            this.Equipment1_Inteval_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment1_Inteval_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment1_Inteval_Label.Location = new System.Drawing.Point(383, 47);
+            this.Equipment1_Inteval_Label.Name = "Equipment1_Inteval_Label";
+            this.Equipment1_Inteval_Label.Size = new System.Drawing.Size(222, 19);
+            this.Equipment1_Inteval_Label.TabIndex = 2;
+            this.Equipment1_Inteval_Label.Text = "设备发送时间间隔：300";
+            // 
+            // Equipment1_BaudRate_Label
+            // 
+            this.Equipment1_BaudRate_Label.AutoSize = true;
+            this.Equipment1_BaudRate_Label.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Equipment1_BaudRate_Label.ForeColor = System.Drawing.Color.Yellow;
+            this.Equipment1_BaudRate_Label.Location = new System.Drawing.Point(182, 47);
+            this.Equipment1_BaudRate_Label.Name = "Equipment1_BaudRate_Label";
+            this.Equipment1_BaudRate_Label.Size = new System.Drawing.Size(195, 19);
+            this.Equipment1_BaudRate_Label.TabIndex = 1;
+            this.Equipment1_BaudRate_Label.Text = "串口波特率：115200";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(16, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 19);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "设备序号：设备1";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.WIndowName_TextBox);
+            this.panel3.Controls.Add(this.Timer_Intevel_ComboBox);
             this.panel3.Controls.Add(this.Protocol_Content_TextBox);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label14);
@@ -1069,21 +1481,20 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.Protocol_TitleName_ComboBox);
             this.panel3.Controls.Add(this.SaveSet_Button);
-            this.panel3.Controls.Add(this.Timer_Intevel_ComboBox);
             this.panel3.Controls.Add(this.SerialPort_BaudRate_ComboBox);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.Equipment_ComboBox);
-            this.panel3.Location = new System.Drawing.Point(28, 61);
+            this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(496, 375);
+            this.panel3.Size = new System.Drawing.Size(1259, 210);
             this.panel3.TabIndex = 0;
             // 
             // Protocol_Content_TextBox
             // 
-            this.Protocol_Content_TextBox.Location = new System.Drawing.Point(223, 249);
+            this.Protocol_Content_TextBox.Location = new System.Drawing.Point(539, 96);
             this.Protocol_Content_TextBox.Name = "Protocol_Content_TextBox";
             this.Protocol_Content_TextBox.ReadOnly = true;
-            this.Protocol_Content_TextBox.Size = new System.Drawing.Size(252, 21);
+            this.Protocol_Content_TextBox.Size = new System.Drawing.Size(202, 21);
             this.Protocol_Content_TextBox.TabIndex = 12;
             // 
             // label15
@@ -1091,7 +1502,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("宋体", 15F);
             this.label15.ForeColor = System.Drawing.Color.Yellow;
-            this.label15.Location = new System.Drawing.Point(128, 249);
+            this.label15.Location = new System.Drawing.Point(444, 95);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 20);
             this.label15.TabIndex = 11;
@@ -1102,7 +1513,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("宋体", 15F);
             this.label14.ForeColor = System.Drawing.Color.Yellow;
-            this.label14.Location = new System.Drawing.Point(148, 206);
+            this.label14.Location = new System.Drawing.Point(28, 99);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 20);
             this.label14.TabIndex = 10;
@@ -1113,7 +1524,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("宋体", 15F);
             this.label13.ForeColor = System.Drawing.Color.Yellow;
-            this.label13.Location = new System.Drawing.Point(8, 157);
+            this.label13.Location = new System.Drawing.Point(827, 57);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(209, 20);
             this.label13.TabIndex = 9;
@@ -1124,7 +1535,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("宋体", 15F);
             this.label12.ForeColor = System.Drawing.Color.Yellow;
-            this.label12.Location = new System.Drawing.Point(68, 110);
+            this.label12.Location = new System.Drawing.Point(384, 57);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(149, 20);
             this.label12.TabIndex = 8;
@@ -1135,7 +1546,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("宋体", 15F);
             this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(128, 57);
+            this.label11.Location = new System.Drawing.Point(8, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 20);
             this.label11.TabIndex = 7;
@@ -1144,44 +1555,22 @@
             // Protocol_TitleName_ComboBox
             // 
             this.Protocol_TitleName_ComboBox.FormattingEnabled = true;
-            this.Protocol_TitleName_ComboBox.Location = new System.Drawing.Point(223, 206);
+            this.Protocol_TitleName_ComboBox.Location = new System.Drawing.Point(103, 99);
             this.Protocol_TitleName_ComboBox.Name = "Protocol_TitleName_ComboBox";
-            this.Protocol_TitleName_ComboBox.Size = new System.Drawing.Size(252, 20);
+            this.Protocol_TitleName_ComboBox.Size = new System.Drawing.Size(144, 20);
             this.Protocol_TitleName_ComboBox.TabIndex = 5;
             this.Protocol_TitleName_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Protocol_TitleName_ComboBox_SelectedIndexChanged);
             // 
             // SaveSet_Button
             // 
-            this.SaveSet_Button.Location = new System.Drawing.Point(160, 294);
+            this.SaveSet_Button.Font = new System.Drawing.Font("宋体", 15F);
+            this.SaveSet_Button.Location = new System.Drawing.Point(463, 151);
             this.SaveSet_Button.Name = "SaveSet_Button";
-            this.SaveSet_Button.Size = new System.Drawing.Size(128, 27);
+            this.SaveSet_Button.Size = new System.Drawing.Size(214, 43);
             this.SaveSet_Button.TabIndex = 4;
             this.SaveSet_Button.Text = "保存设置";
             this.SaveSet_Button.UseVisualStyleBackColor = true;
             this.SaveSet_Button.Click += new System.EventHandler(this.SaveSet_Button_Click);
-            // 
-            // Timer_Intevel_ComboBox
-            // 
-            this.Timer_Intevel_ComboBox.FormattingEnabled = true;
-            this.Timer_Intevel_ComboBox.Items.AddRange(new object[] {
-            "100",
-            "200",
-            "300",
-            "400",
-            "500",
-            "600",
-            "700",
-            "800",
-            "900",
-            "1000",
-            "1100",
-            "1200",
-            "1300",
-            "1400"});
-            this.Timer_Intevel_ComboBox.Location = new System.Drawing.Point(223, 157);
-            this.Timer_Intevel_ComboBox.Name = "Timer_Intevel_ComboBox";
-            this.Timer_Intevel_ComboBox.Size = new System.Drawing.Size(252, 20);
-            this.Timer_Intevel_ComboBox.TabIndex = 3;
             // 
             // SerialPort_BaudRate_ComboBox
             // 
@@ -1198,19 +1587,19 @@
             "    38400",
             "    57600",
             "   115200"});
-            this.SerialPort_BaudRate_ComboBox.Location = new System.Drawing.Point(223, 110);
+            this.SerialPort_BaudRate_ComboBox.Location = new System.Drawing.Point(539, 57);
             this.SerialPort_BaudRate_ComboBox.Name = "SerialPort_BaudRate_ComboBox";
-            this.SerialPort_BaudRate_ComboBox.Size = new System.Drawing.Size(252, 20);
+            this.SerialPort_BaudRate_ComboBox.Size = new System.Drawing.Size(202, 20);
             this.SerialPort_BaudRate_ComboBox.TabIndex = 2;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 15F);
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(177, 12);
+            this.label10.Location = new System.Drawing.Point(529, 13);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 20);
+            this.label10.Size = new System.Drawing.Size(92, 27);
             this.label10.TabIndex = 1;
             this.label10.Text = "设备设置";
             // 
@@ -1223,9 +1612,9 @@
             "设备3",
             "设备4",
             "设备5"});
-            this.Equipment_ComboBox.Location = new System.Drawing.Point(223, 61);
+            this.Equipment_ComboBox.Location = new System.Drawing.Point(103, 57);
             this.Equipment_ComboBox.Name = "Equipment_ComboBox";
-            this.Equipment_ComboBox.Size = new System.Drawing.Size(252, 20);
+            this.Equipment_ComboBox.Size = new System.Drawing.Size(144, 20);
             this.Equipment_ComboBox.TabIndex = 0;
             this.Equipment_ComboBox.SelectedIndexChanged += new System.EventHandler(this.Equipment_ComboBox_SelectedIndexChanged);
             // 
@@ -1314,16 +1703,41 @@
             this.Timer_Send_5.Tag = "Send_5";
             this.Timer_Send_5.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
+            // Timer_Intevel_ComboBox
+            // 
+            this.Timer_Intevel_ComboBox.Location = new System.Drawing.Point(1043, 57);
+            this.Timer_Intevel_ComboBox.Name = "Timer_Intevel_ComboBox";
+            this.Timer_Intevel_ComboBox.Size = new System.Drawing.Size(190, 21);
+            this.Timer_Intevel_ComboBox.TabIndex = 13;
+            // 
+            // WIndowName_TextBox
+            // 
+            this.WIndowName_TextBox.Location = new System.Drawing.Point(1043, 97);
+            this.WIndowName_TextBox.Name = "WIndowName_TextBox";
+            this.WIndowName_TextBox.Size = new System.Drawing.Size(190, 21);
+            this.WIndowName_TextBox.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 15F);
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(947, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "窗体名字";
+            // 
             // Multi_Device_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 862);
+            this.ClientSize = new System.Drawing.Size(1284, 862);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Multi_Device_Form";
-            this.Text = "多设备放电检测测试仪";
+            this.Text = "设备测试后台";
             this.Load += new System.EventHandler(this.Multi_Device_Form_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1358,6 +1772,17 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -1393,7 +1818,6 @@
         private System.Windows.Forms.ComboBox Equipment_ComboBox;
         private System.Windows.Forms.ComboBox SerialPort_BaudRate_ComboBox;
         private System.Windows.Forms.Button SaveSet_Button;
-        private System.Windows.Forms.ComboBox Timer_Intevel_ComboBox;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox Protocol_TitleName_ComboBox;
         private System.Windows.Forms.Label label15;
@@ -1472,6 +1896,40 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Equipment1_BaudRate_Label;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Equipment1_Inteval_Label;
+        private System.Windows.Forms.Label Equipment1_ProtoclContent_Label;
+        private System.Windows.Forms.Label Equipment1_ProtocolName_Label;
+        private System.Windows.Forms.Label Equipment5_ProtoclContent_Label;
+        private System.Windows.Forms.Label Equipment5_ProtocolName_Label;
+        private System.Windows.Forms.Label Equipment5_Inteval_Label;
+        private System.Windows.Forms.Label Equipment5_BaudRate_Label;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label Equipment4_ProtoclContent_Label;
+        private System.Windows.Forms.Label Equipment4_ProtocolName_Label;
+        private System.Windows.Forms.Label Equipment4_Inteval_Label;
+        private System.Windows.Forms.Label Equipment4_BaudRate_Label;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label Equipment3_ProtoclContent_Label;
+        private System.Windows.Forms.Label Equipment3_ProtocolName_Label;
+        private System.Windows.Forms.Label Equipment3_Inteval_Label;
+        private System.Windows.Forms.Label Equipment3_BaudRate_Label;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label Equipment2_ProtoclContent_Label;
+        private System.Windows.Forms.Label Equipment2_ProtocolName_Label;
+        private System.Windows.Forms.Label Equipment2_Inteval_Label;
+        private System.Windows.Forms.Label Equipment2_BaudRate_Label;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox Timer_Intevel_ComboBox;
+        private System.Windows.Forms.TextBox WIndowName_TextBox;
+        private System.Windows.Forms.Label label7;
     }
 }
 
