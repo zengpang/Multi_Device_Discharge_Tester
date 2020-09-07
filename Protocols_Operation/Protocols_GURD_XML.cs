@@ -39,10 +39,6 @@ namespace 多设备放电检测测试仪.Protocols_Operation
             }
             return protocolList;
         }
-        public Protocols Add(string Protocol_TitleName, string Protocol_Content, Protocols protocolList)
-        {
-            protocolList.Protocolist.Add(new ProtocolSingle(Protocol_TitleName, Protocol_Content));
-            return protocolList;
-        }
+      
     }
 }

@@ -32,6 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Multi_Device_Form));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.c1Chart6 = new C1.Win.C1Chart.C1Chart();
+            this.Total_Energy_Label_6 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_6 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_6 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_6 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.Total_Energy_Label_5 = new System.Windows.Forms.Label();
             this.Partial_Average_Label_5 = new System.Windows.Forms.Label();
@@ -92,11 +102,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.SerialPort2_ComboBox = new System.Windows.Forms.ComboBox();
             this.SerialPort2_Button = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.c1Chart1 = new C1.Win.C1Chart.C1Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Total_Energy_Label_1 = new System.Windows.Forms.Label();
             this.Partial_Average_Label_1 = new System.Windows.Forms.Label();
+            this.c1Chart1 = new C1.Win.C1Chart.C1Chart();
             this.Partial_Max_Label_1 = new System.Windows.Forms.Label();
             this.DisChargIng_Label_1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -140,6 +149,9 @@
             this.Equipment1_BaudRate_Label = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.WIndowName_TextBox = new System.Windows.Forms.TextBox();
+            this.Timer_Intevel_ComboBox = new System.Windows.Forms.TextBox();
             this.Protocol_Content_TextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -166,11 +178,19 @@
             this.Timer_Send_3 = new System.Windows.Forms.Timer(this.components);
             this.Timer_Send_4 = new System.Windows.Forms.Timer(this.components);
             this.Timer_Send_5 = new System.Windows.Forms.Timer(this.components);
-            this.Timer_Intevel_ComboBox = new System.Windows.Forms.TextBox();
-            this.WIndowName_TextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.c1Chart7 = new C1.Win.C1Chart.C1Chart();
+            this.Total_Energy_Label_7 = new System.Windows.Forms.Label();
+            this.Partial_Average_Label_7 = new System.Windows.Forms.Label();
+            this.Partial_Max_Label_7 = new System.Windows.Forms.Label();
+            this.DisChargIng_Label_7 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart6)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -187,9 +207,8 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.c1Chart1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -199,6 +218,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart7)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -209,12 +229,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1284, 862);
+            this.tabControl1.Size = new System.Drawing.Size(1393, 862);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
+            this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel16);
             this.tabPage1.Controls.Add(this.panel15);
             this.tabPage1.Controls.Add(this.panel14);
@@ -227,15 +249,133 @@
             this.tabPage1.Controls.Add(this.panel7);
             this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Controls.Add(this.panel5);
-            this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1276, 836);
+            this.tabPage1.Size = new System.Drawing.Size(1385, 836);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "放电检测";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel4.Controls.Add(this.c1Chart6);
+            this.panel4.Controls.Add(this.Total_Energy_Label_6);
+            this.panel4.Controls.Add(this.Partial_Average_Label_6);
+            this.panel4.Controls.Add(this.Partial_Max_Label_6);
+            this.panel4.Controls.Add(this.DisChargIng_Label_6);
+            this.panel4.Controls.Add(this.label23);
+            this.panel4.Controls.Add(this.label28);
+            this.panel4.Controls.Add(this.label29);
+            this.panel4.Controls.Add(this.label31);
+            this.panel4.Location = new System.Drawing.Point(782, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(584, 134);
+            this.panel4.TabIndex = 32;
+            // 
+            // c1Chart6
+            // 
+            this.c1Chart6.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.c1Chart6.BackColor = System.Drawing.Color.Transparent;
+            this.c1Chart6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.c1Chart6.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
+            this.c1Chart6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.c1Chart6.Location = new System.Drawing.Point(182, 5);
+            this.c1Chart6.Margin = new System.Windows.Forms.Padding(1);
+            this.c1Chart6.Name = "c1Chart6";
+            this.c1Chart6.PropBag = resources.GetString("c1Chart6.PropBag");
+            this.c1Chart6.Size = new System.Drawing.Size(401, 131);
+            this.c1Chart6.TabIndex = 32;
+            // 
+            // Total_Energy_Label_6
+            // 
+            this.Total_Energy_Label_6.AutoSize = true;
+            this.Total_Energy_Label_6.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_6.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_6.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_6.Name = "Total_Energy_Label_6";
+            this.Total_Energy_Label_6.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_6.TabIndex = 7;
+            this.Total_Energy_Label_6.Text = "0";
+            // 
+            // Partial_Average_Label_6
+            // 
+            this.Partial_Average_Label_6.AutoSize = true;
+            this.Partial_Average_Label_6.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_6.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_6.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_6.Name = "Partial_Average_Label_6";
+            this.Partial_Average_Label_6.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_6.TabIndex = 6;
+            this.Partial_Average_Label_6.Text = "0 PC";
+            // 
+            // Partial_Max_Label_6
+            // 
+            this.Partial_Max_Label_6.AutoSize = true;
+            this.Partial_Max_Label_6.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_6.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_6.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_6.Name = "Partial_Max_Label_6";
+            this.Partial_Max_Label_6.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_6.TabIndex = 5;
+            this.Partial_Max_Label_6.Text = "0 PC";
+            // 
+            // DisChargIng_Label_6
+            // 
+            this.DisChargIng_Label_6.AutoSize = true;
+            this.DisChargIng_Label_6.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_6.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_6.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_6.Name = "DisChargIng_Label_6";
+            this.DisChargIng_Label_6.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_6.TabIndex = 4;
+            this.DisChargIng_Label_6.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("宋体", 13F);
+            this.label23.ForeColor = System.Drawing.Color.Yellow;
+            this.label23.Location = new System.Drawing.Point(3, 104);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(98, 18);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "采集总能量";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("宋体", 13F);
+            this.label28.ForeColor = System.Drawing.Color.Yellow;
+            this.label28.Location = new System.Drawing.Point(3, 72);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(80, 18);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "局放均值";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("宋体", 13F);
+            this.label29.ForeColor = System.Drawing.Color.Yellow;
+            this.label29.Location = new System.Drawing.Point(3, 42);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(80, 18);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "局放最值";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("宋体", 13F);
+            this.label31.ForeColor = System.Drawing.Color.Yellow;
+            this.label31.Location = new System.Drawing.Point(3, 11);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(80, 18);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "放电次数";
             // 
             // panel16
             // 
@@ -248,7 +388,7 @@
             this.panel16.Controls.Add(this.label49);
             this.panel16.Controls.Add(this.label50);
             this.panel16.Controls.Add(this.label51);
-            this.panel16.Location = new System.Drawing.Point(218, 694);
+            this.panel16.Location = new System.Drawing.Point(218, 567);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(180, 134);
             this.panel16.TabIndex = 16;
@@ -352,7 +492,7 @@
             this.panel15.Controls.Add(this.label41);
             this.panel15.Controls.Add(this.label42);
             this.panel15.Controls.Add(this.label43);
-            this.panel15.Location = new System.Drawing.Point(218, 531);
+            this.panel15.Location = new System.Drawing.Point(218, 426);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(180, 134);
             this.panel15.TabIndex = 15;
@@ -456,7 +596,7 @@
             this.panel14.Controls.Add(this.label33);
             this.panel14.Controls.Add(this.label34);
             this.panel14.Controls.Add(this.label35);
-            this.panel14.Location = new System.Drawing.Point(218, 364);
+            this.panel14.Location = new System.Drawing.Point(218, 286);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(180, 134);
             this.panel14.TabIndex = 14;
@@ -552,6 +692,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
+            this.panel13.Controls.Add(this.c1Chart2);
             this.panel13.Controls.Add(this.Total_Energy_Label_2);
             this.panel13.Controls.Add(this.Partial_Average_Label_2);
             this.panel13.Controls.Add(this.Partial_Max_Label_2);
@@ -560,9 +701,9 @@
             this.panel13.Controls.Add(this.label25);
             this.panel13.Controls.Add(this.label26);
             this.panel13.Controls.Add(this.label27);
-            this.panel13.Location = new System.Drawing.Point(218, 197);
+            this.panel13.Location = new System.Drawing.Point(218, 146);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(180, 134);
+            this.panel13.Size = new System.Drawing.Size(547, 134);
             this.panel13.TabIndex = 13;
             // 
             // Total_Energy_Label_2
@@ -657,9 +798,9 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.panel12.Controls.Add(this.c1Chart5);
-            this.panel12.Location = new System.Drawing.Point(422, 694);
+            this.panel12.Location = new System.Drawing.Point(419, 563);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(842, 131);
+            this.panel12.Size = new System.Drawing.Size(946, 142);
             this.panel12.TabIndex = 12;
             // 
             // c1Chart5
@@ -672,20 +813,20 @@
             this.c1Chart5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.c1Chart5.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
             this.c1Chart5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.c1Chart5.Location = new System.Drawing.Point(1, 0);
+            this.c1Chart5.Location = new System.Drawing.Point(3, 0);
             this.c1Chart5.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart5.Name = "c1Chart5";
             this.c1Chart5.PropBag = resources.GetString("c1Chart5.PropBag");
-            this.c1Chart5.Size = new System.Drawing.Size(840, 131);
+            this.c1Chart5.Size = new System.Drawing.Size(944, 142);
             this.c1Chart5.TabIndex = 31;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.panel11.Controls.Add(this.c1Chart4);
-            this.panel11.Location = new System.Drawing.Point(421, 531);
+            this.panel11.Location = new System.Drawing.Point(420, 426);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(844, 131);
+            this.panel11.Size = new System.Drawing.Size(946, 131);
             this.panel11.TabIndex = 11;
             // 
             // c1Chart4
@@ -698,20 +839,20 @@
             this.c1Chart4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.c1Chart4.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
             this.c1Chart4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.c1Chart4.Location = new System.Drawing.Point(1, 0);
+            this.c1Chart4.Location = new System.Drawing.Point(3, 0);
             this.c1Chart4.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart4.Name = "c1Chart4";
             this.c1Chart4.PropBag = resources.GetString("c1Chart4.PropBag");
-            this.c1Chart4.Size = new System.Drawing.Size(842, 131);
+            this.c1Chart4.Size = new System.Drawing.Size(944, 131);
             this.c1Chart4.TabIndex = 31;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.panel10.Controls.Add(this.c1Chart3);
-            this.panel10.Location = new System.Drawing.Point(420, 364);
+            this.panel10.Location = new System.Drawing.Point(419, 286);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(846, 131);
+            this.panel10.Size = new System.Drawing.Size(946, 131);
             this.panel10.TabIndex = 10;
             // 
             // c1Chart3
@@ -728,33 +869,38 @@
             this.c1Chart3.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart3.Name = "c1Chart3";
             this.c1Chart3.PropBag = resources.GetString("c1Chart3.PropBag");
-            this.c1Chart3.Size = new System.Drawing.Size(844, 131);
+            this.c1Chart3.Size = new System.Drawing.Size(948, 131);
             this.c1Chart3.TabIndex = 31;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.panel9.Controls.Add(this.c1Chart2);
-            this.panel9.Location = new System.Drawing.Point(419, 197);
+            this.panel9.Controls.Add(this.Total_Energy_Label_7);
+            this.panel9.Controls.Add(this.Partial_Average_Label_7);
+            this.panel9.Controls.Add(this.Partial_Max_Label_7);
+            this.panel9.Controls.Add(this.DisChargIng_Label_7);
+            this.panel9.Controls.Add(this.label36);
+            this.panel9.Controls.Add(this.label37);
+            this.panel9.Controls.Add(this.label38);
+            this.panel9.Controls.Add(this.label44);
+            this.panel9.Controls.Add(this.c1Chart7);
+            this.panel9.Location = new System.Drawing.Point(782, 146);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(848, 131);
+            this.panel9.Size = new System.Drawing.Size(583, 131);
             this.panel9.TabIndex = 9;
             // 
             // c1Chart2
             // 
-            this.c1Chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.c1Chart2.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.c1Chart2.BackColor = System.Drawing.Color.Transparent;
             this.c1Chart2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.c1Chart2.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
             this.c1Chart2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.c1Chart2.Location = new System.Drawing.Point(1, 0);
+            this.c1Chart2.Location = new System.Drawing.Point(179, -1);
             this.c1Chart2.Margin = new System.Windows.Forms.Padding(1);
             this.c1Chart2.Name = "c1Chart2";
             this.c1Chart2.PropBag = resources.GetString("c1Chart2.PropBag");
-            this.c1Chart2.Size = new System.Drawing.Size(846, 131);
+            this.c1Chart2.Size = new System.Drawing.Size(368, 131);
             this.c1Chart2.TabIndex = 31;
             // 
             // panel8
@@ -763,7 +909,7 @@
             this.panel8.Controls.Add(this.label19);
             this.panel8.Controls.Add(this.SerialPort5_ComboBox);
             this.panel8.Controls.Add(this.SerialPort5_Button);
-            this.panel8.Location = new System.Drawing.Point(17, 694);
+            this.panel8.Location = new System.Drawing.Point(17, 567);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(178, 134);
             this.panel8.TabIndex = 8;
@@ -789,12 +935,15 @@
             // 
             // SerialPort5_Button
             // 
+            this.SerialPort5_Button.BackColor = System.Drawing.Color.White;
+            this.SerialPort5_Button.FlatAppearance.BorderSize = 0;
+            this.SerialPort5_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SerialPort5_Button.Location = new System.Drawing.Point(68, 72);
             this.SerialPort5_Button.Name = "SerialPort5_Button";
             this.SerialPort5_Button.Size = new System.Drawing.Size(103, 36);
             this.SerialPort5_Button.TabIndex = 0;
             this.SerialPort5_Button.Text = "打开串口";
-            this.SerialPort5_Button.UseVisualStyleBackColor = true;
+            this.SerialPort5_Button.UseVisualStyleBackColor = false;
             this.SerialPort5_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel7
@@ -803,7 +952,7 @@
             this.panel7.Controls.Add(this.label18);
             this.panel7.Controls.Add(this.SerialPort4_ComboBox);
             this.panel7.Controls.Add(this.SerialPort4_Button);
-            this.panel7.Location = new System.Drawing.Point(17, 531);
+            this.panel7.Location = new System.Drawing.Point(17, 426);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(178, 134);
             this.panel7.TabIndex = 7;
@@ -829,12 +978,16 @@
             // 
             // SerialPort4_Button
             // 
+            this.SerialPort4_Button.BackColor = System.Drawing.Color.White;
+            this.SerialPort4_Button.FlatAppearance.BorderSize = 0;
+            this.SerialPort4_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SerialPort4_Button.Location = new System.Drawing.Point(68, 72);
             this.SerialPort4_Button.Name = "SerialPort4_Button";
             this.SerialPort4_Button.Size = new System.Drawing.Size(103, 36);
             this.SerialPort4_Button.TabIndex = 0;
             this.SerialPort4_Button.Text = "打开串口";
-            this.SerialPort4_Button.UseVisualStyleBackColor = true;
+            this.SerialPort4_Button.UseVisualStyleBackColor = false;
+            this.SerialPort4_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel6
             // 
@@ -842,7 +995,7 @@
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.SerialPort3_ComboBox);
             this.panel6.Controls.Add(this.SerialPort3_Button);
-            this.panel6.Location = new System.Drawing.Point(17, 364);
+            this.panel6.Location = new System.Drawing.Point(17, 286);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(178, 134);
             this.panel6.TabIndex = 6;
@@ -868,12 +1021,15 @@
             // 
             // SerialPort3_Button
             // 
+            this.SerialPort3_Button.BackColor = System.Drawing.Color.White;
+            this.SerialPort3_Button.FlatAppearance.BorderSize = 0;
+            this.SerialPort3_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SerialPort3_Button.Location = new System.Drawing.Point(68, 72);
             this.SerialPort3_Button.Name = "SerialPort3_Button";
             this.SerialPort3_Button.Size = new System.Drawing.Size(103, 36);
             this.SerialPort3_Button.TabIndex = 0;
             this.SerialPort3_Button.Text = "打开串口";
-            this.SerialPort3_Button.UseVisualStyleBackColor = true;
+            this.SerialPort3_Button.UseVisualStyleBackColor = false;
             this.SerialPort3_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // panel5
@@ -882,7 +1038,7 @@
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.SerialPort2_ComboBox);
             this.panel5.Controls.Add(this.SerialPort2_Button);
-            this.panel5.Location = new System.Drawing.Point(17, 197);
+            this.panel5.Location = new System.Drawing.Point(17, 146);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(178, 134);
             this.panel5.TabIndex = 5;
@@ -908,54 +1064,33 @@
             // 
             // SerialPort2_Button
             // 
+            this.SerialPort2_Button.BackColor = System.Drawing.Color.White;
+            this.SerialPort2_Button.FlatAppearance.BorderSize = 0;
+            this.SerialPort2_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SerialPort2_Button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SerialPort2_Button.Location = new System.Drawing.Point(68, 72);
             this.SerialPort2_Button.Name = "SerialPort2_Button";
             this.SerialPort2_Button.Size = new System.Drawing.Size(103, 36);
             this.SerialPort2_Button.TabIndex = 0;
             this.SerialPort2_Button.Text = "打开串口";
-            this.SerialPort2_Button.UseVisualStyleBackColor = true;
+            this.SerialPort2_Button.UseVisualStyleBackColor = false;
             this.SerialPort2_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
-            this.panel4.Controls.Add(this.c1Chart1);
-            this.panel4.Location = new System.Drawing.Point(420, 32);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(848, 131);
-            this.panel4.TabIndex = 4;
-            // 
-            // c1Chart1
-            // 
-            this.c1Chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.c1Chart1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.c1Chart1.BackColor = System.Drawing.Color.Transparent;
-            this.c1Chart1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.c1Chart1.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
-            this.c1Chart1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.c1Chart1.Location = new System.Drawing.Point(1, 0);
-            this.c1Chart1.Margin = new System.Windows.Forms.Padding(1);
-            this.c1Chart1.Name = "c1Chart1";
-            this.c1Chart1.PropBag = resources.GetString("c1Chart1.PropBag");
-            this.c1Chart1.Size = new System.Drawing.Size(846, 131);
-            this.c1Chart1.TabIndex = 31;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.panel2.Controls.Add(this.Total_Energy_Label_1);
             this.panel2.Controls.Add(this.Partial_Average_Label_1);
+            this.panel2.Controls.Add(this.c1Chart1);
             this.panel2.Controls.Add(this.Partial_Max_Label_1);
             this.panel2.Controls.Add(this.DisChargIng_Label_1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(218, 29);
+            this.panel2.Location = new System.Drawing.Point(218, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 134);
+            this.panel2.Size = new System.Drawing.Size(548, 134);
             this.panel2.TabIndex = 3;
             // 
             // Total_Energy_Label_1
@@ -979,6 +1114,20 @@
             this.Partial_Average_Label_1.Size = new System.Drawing.Size(44, 18);
             this.Partial_Average_Label_1.TabIndex = 6;
             this.Partial_Average_Label_1.Text = "0 PC";
+            // 
+            // c1Chart1
+            // 
+            this.c1Chart1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.c1Chart1.BackColor = System.Drawing.Color.Transparent;
+            this.c1Chart1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.c1Chart1.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
+            this.c1Chart1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.c1Chart1.Location = new System.Drawing.Point(179, 1);
+            this.c1Chart1.Margin = new System.Windows.Forms.Padding(1);
+            this.c1Chart1.Name = "c1Chart1";
+            this.c1Chart1.PropBag = resources.GetString("c1Chart1.PropBag");
+            this.c1Chart1.Size = new System.Drawing.Size(368, 131);
+            this.c1Chart1.TabIndex = 31;
             // 
             // Partial_Max_Label_1
             // 
@@ -1018,7 +1167,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 13F);
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(14, 72);
+            this.label4.Location = new System.Drawing.Point(3, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 2;
@@ -1029,7 +1178,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 13F);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(14, 42);
+            this.label3.Location = new System.Drawing.Point(3, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 1;
@@ -1040,7 +1189,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 13F);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(14, 11);
+            this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 0;
@@ -1052,7 +1201,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.SerialPort1_ComboBox);
             this.panel1.Controls.Add(this.SerialPort1_Button);
-            this.panel1.Location = new System.Drawing.Point(17, 29);
+            this.panel1.Location = new System.Drawing.Point(17, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(178, 134);
             this.panel1.TabIndex = 0;
@@ -1078,23 +1227,27 @@
             // 
             // SerialPort1_Button
             // 
+            this.SerialPort1_Button.BackColor = System.Drawing.Color.White;
+            this.SerialPort1_Button.FlatAppearance.BorderSize = 0;
+            this.SerialPort1_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SerialPort1_Button.Location = new System.Drawing.Point(68, 72);
             this.SerialPort1_Button.Name = "SerialPort1_Button";
             this.SerialPort1_Button.Size = new System.Drawing.Size(103, 36);
             this.SerialPort1_Button.TabIndex = 0;
             this.SerialPort1_Button.Text = "打开串口";
-            this.SerialPort1_Button.UseVisualStyleBackColor = true;
+            this.SerialPort1_Button.UseVisualStyleBackColor = false;
             this.SerialPort1_Button.Click += new System.EventHandler(this.SerialPort_Button_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(46)))));
             this.tabPage2.Controls.Add(this.panel17);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1276, 836);
+            this.tabPage2.Size = new System.Drawing.Size(1385, 836);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "系统设置";
             // 
@@ -1106,9 +1259,9 @@
             this.panel17.Controls.Add(this.groupBox3);
             this.panel17.Controls.Add(this.groupBox2);
             this.panel17.Controls.Add(this.groupBox1);
-            this.panel17.Location = new System.Drawing.Point(6, 234);
+            this.panel17.Location = new System.Drawing.Point(3, 209);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1262, 594);
+            this.panel17.Size = new System.Drawing.Size(1374, 531);
             this.panel17.TabIndex = 1;
             // 
             // groupBox5
@@ -1120,9 +1273,9 @@
             this.groupBox5.Controls.Add(this.label52);
             this.groupBox5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(8, 493);
+            this.groupBox5.Location = new System.Drawing.Point(11, 419);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox5.Size = new System.Drawing.Size(1360, 98);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "设备5";
@@ -1192,9 +1345,9 @@
             this.groupBox4.Controls.Add(this.label39);
             this.groupBox4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(8, 368);
+            this.groupBox4.Location = new System.Drawing.Point(12, 315);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox4.Size = new System.Drawing.Size(1359, 98);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "设备4";
@@ -1263,9 +1416,9 @@
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(8, 248);
+            this.groupBox3.Location = new System.Drawing.Point(12, 211);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1251, 98);
+            this.groupBox3.Size = new System.Drawing.Size(1359, 98);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "设备3";
@@ -1334,9 +1487,9 @@
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 138);
+            this.groupBox2.Location = new System.Drawing.Point(12, 107);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1247, 98);
+            this.groupBox2.Size = new System.Drawing.Size(1359, 98);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "设备2";
@@ -1405,9 +1558,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 18);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1247, 98);
+            this.groupBox1.Size = new System.Drawing.Size(1359, 98);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "设备1";
@@ -1486,8 +1639,33 @@
             this.panel3.Controls.Add(this.Equipment_ComboBox);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1259, 210);
+            this.panel3.Size = new System.Drawing.Size(1371, 197);
             this.panel3.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 15F);
+            this.label7.ForeColor = System.Drawing.Color.Yellow;
+            this.label7.Location = new System.Drawing.Point(947, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "窗体名字";
+            // 
+            // WIndowName_TextBox
+            // 
+            this.WIndowName_TextBox.Location = new System.Drawing.Point(1043, 97);
+            this.WIndowName_TextBox.Name = "WIndowName_TextBox";
+            this.WIndowName_TextBox.Size = new System.Drawing.Size(190, 21);
+            this.WIndowName_TextBox.TabIndex = 14;
+            // 
+            // Timer_Intevel_ComboBox
+            // 
+            this.Timer_Intevel_ComboBox.Location = new System.Drawing.Point(1043, 57);
+            this.Timer_Intevel_ComboBox.Name = "Timer_Intevel_ComboBox";
+            this.Timer_Intevel_ComboBox.Size = new System.Drawing.Size(190, 21);
+            this.Timer_Intevel_ComboBox.TabIndex = 13;
             // 
             // Protocol_Content_TextBox
             // 
@@ -1564,7 +1742,7 @@
             // SaveSet_Button
             // 
             this.SaveSet_Button.Font = new System.Drawing.Font("宋体", 15F);
-            this.SaveSet_Button.Location = new System.Drawing.Point(463, 151);
+            this.SaveSet_Button.Location = new System.Drawing.Point(464, 138);
             this.SaveSet_Button.Name = "SaveSet_Button";
             this.SaveSet_Button.Size = new System.Drawing.Size(214, 43);
             this.SaveSet_Button.TabIndex = 4;
@@ -1703,37 +1881,115 @@
             this.Timer_Send_5.Tag = "Send_5";
             this.Timer_Send_5.Tick += new System.EventHandler(this.timer_Send_Tick);
             // 
-            // Timer_Intevel_ComboBox
+            // c1Chart7
             // 
-            this.Timer_Intevel_ComboBox.Location = new System.Drawing.Point(1043, 57);
-            this.Timer_Intevel_ComboBox.Name = "Timer_Intevel_ComboBox";
-            this.Timer_Intevel_ComboBox.Size = new System.Drawing.Size(190, 21);
-            this.Timer_Intevel_ComboBox.TabIndex = 13;
+            this.c1Chart7.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.c1Chart7.BackColor = System.Drawing.Color.Transparent;
+            this.c1Chart7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.c1Chart7.Font = new System.Drawing.Font("楷体", 18F, System.Drawing.FontStyle.Bold);
+            this.c1Chart7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.c1Chart7.Location = new System.Drawing.Point(182, -2);
+            this.c1Chart7.Margin = new System.Windows.Forms.Padding(1);
+            this.c1Chart7.Name = "c1Chart7";
+            this.c1Chart7.PropBag = resources.GetString("c1Chart7.PropBag");
+            this.c1Chart7.Size = new System.Drawing.Size(400, 131);
+            this.c1Chart7.TabIndex = 32;
             // 
-            // WIndowName_TextBox
+            // Total_Energy_Label_7
             // 
-            this.WIndowName_TextBox.Location = new System.Drawing.Point(1043, 97);
-            this.WIndowName_TextBox.Name = "WIndowName_TextBox";
-            this.WIndowName_TextBox.Size = new System.Drawing.Size(190, 21);
-            this.WIndowName_TextBox.TabIndex = 14;
+            this.Total_Energy_Label_7.AutoSize = true;
+            this.Total_Energy_Label_7.Font = new System.Drawing.Font("宋体", 13F);
+            this.Total_Energy_Label_7.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Total_Energy_Label_7.Location = new System.Drawing.Point(100, 104);
+            this.Total_Energy_Label_7.Name = "Total_Energy_Label_7";
+            this.Total_Energy_Label_7.Size = new System.Drawing.Size(17, 18);
+            this.Total_Energy_Label_7.TabIndex = 40;
+            this.Total_Energy_Label_7.Text = "0";
             // 
-            // label7
+            // Partial_Average_Label_7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 15F);
-            this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(947, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "窗体名字";
+            this.Partial_Average_Label_7.AutoSize = true;
+            this.Partial_Average_Label_7.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Average_Label_7.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Average_Label_7.Location = new System.Drawing.Point(100, 72);
+            this.Partial_Average_Label_7.Name = "Partial_Average_Label_7";
+            this.Partial_Average_Label_7.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Average_Label_7.TabIndex = 39;
+            this.Partial_Average_Label_7.Text = "0 PC";
+            // 
+            // Partial_Max_Label_7
+            // 
+            this.Partial_Max_Label_7.AutoSize = true;
+            this.Partial_Max_Label_7.Font = new System.Drawing.Font("宋体", 13F);
+            this.Partial_Max_Label_7.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Partial_Max_Label_7.Location = new System.Drawing.Point(100, 42);
+            this.Partial_Max_Label_7.Name = "Partial_Max_Label_7";
+            this.Partial_Max_Label_7.Size = new System.Drawing.Size(44, 18);
+            this.Partial_Max_Label_7.TabIndex = 38;
+            this.Partial_Max_Label_7.Text = "0 PC";
+            // 
+            // DisChargIng_Label_7
+            // 
+            this.DisChargIng_Label_7.AutoSize = true;
+            this.DisChargIng_Label_7.Font = new System.Drawing.Font("宋体", 13F);
+            this.DisChargIng_Label_7.ForeColor = System.Drawing.Color.Chartreuse;
+            this.DisChargIng_Label_7.Location = new System.Drawing.Point(100, 11);
+            this.DisChargIng_Label_7.Name = "DisChargIng_Label_7";
+            this.DisChargIng_Label_7.Size = new System.Drawing.Size(17, 18);
+            this.DisChargIng_Label_7.TabIndex = 37;
+            this.DisChargIng_Label_7.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("宋体", 13F);
+            this.label36.ForeColor = System.Drawing.Color.Yellow;
+            this.label36.Location = new System.Drawing.Point(3, 104);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(98, 18);
+            this.label36.TabIndex = 36;
+            this.label36.Text = "采集总能量";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("宋体", 13F);
+            this.label37.ForeColor = System.Drawing.Color.Yellow;
+            this.label37.Location = new System.Drawing.Point(3, 72);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(80, 18);
+            this.label37.TabIndex = 35;
+            this.label37.Text = "局放均值";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("宋体", 13F);
+            this.label38.ForeColor = System.Drawing.Color.Yellow;
+            this.label38.Location = new System.Drawing.Point(3, 42);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(80, 18);
+            this.label38.TabIndex = 34;
+            this.label38.Text = "局放最值";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("宋体", 13F);
+            this.label44.ForeColor = System.Drawing.Color.Yellow;
+            this.label44.Location = new System.Drawing.Point(3, 11);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(80, 18);
+            this.label44.TabIndex = 33;
+            this.label44.Text = "放电次数";
             // 
             // Multi_Device_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1284, 862);
+            this.ClientSize = new System.Drawing.Size(1393, 862);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Multi_Device_Form";
@@ -1741,6 +1997,9 @@
             this.Load += new System.EventHandler(this.Multi_Device_Form_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart6)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1756,6 +2015,7 @@
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.c1Chart3)).EndInit();
             this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.c1Chart2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -1765,10 +2025,9 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.c1Chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1785,6 +2044,7 @@
             this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1Chart7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1795,7 +2055,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox SerialPort1_ComboBox;
@@ -1930,6 +2189,25 @@
         private System.Windows.Forms.TextBox Timer_Intevel_ComboBox;
         private System.Windows.Forms.TextBox WIndowName_TextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel4;
+        private C1.Win.C1Chart.C1Chart c1Chart6;
+        private System.Windows.Forms.Label Total_Energy_Label_6;
+        private System.Windows.Forms.Label Partial_Average_Label_6;
+        private System.Windows.Forms.Label Partial_Max_Label_6;
+        private System.Windows.Forms.Label DisChargIng_Label_6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private C1.Win.C1Chart.C1Chart c1Chart7;
+        private System.Windows.Forms.Label Total_Energy_Label_7;
+        private System.Windows.Forms.Label Partial_Average_Label_7;
+        private System.Windows.Forms.Label Partial_Max_Label_7;
+        private System.Windows.Forms.Label DisChargIng_Label_7;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label44;
     }
 }
 
